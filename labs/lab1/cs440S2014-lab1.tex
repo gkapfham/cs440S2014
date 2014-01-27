@@ -10,46 +10,23 @@
 
 \section*{Introduction}
 
-Practicing software engineers normally use a version control system to manage most of the artifacts produced during the
-phases of the software development life cycle.  In this course, we will always use the Git distributed version control
-system to manage the files associated with our laboratory assignments.  In this laboratory assignment, you will learn
-how to use the Bitbucket service for managing Git repositories and the {\tt git} command-line tool in the Ubuntu Linux
-operating system.
+% Practicing software engineers normally use a version control system to manage most of the artifacts produced during the
+% phases of the software development life cycle.  In this course, we will always use the Git distributed version control
+% system to manage the files associated with our laboratory assignments.  In this laboratory assignment, you will learn
+% how to use the Bitbucket service for managing Git repositories and the {\tt git} command-line tool in the Ubuntu Linux
+% operating system.
 
-\section*{Configuring Git and Bitbucket}
+Computer scientists who use, configure, and implement an operating system (OS) often interaction with the OS through the use of
+the shell.  There are many operating system shells available for the Unix, Linux, and Mac OSX operating systems: sh, tcsh, bash,
+and fish.  In this laboratory session, you will learn how to configure and use zsh, arguably the most advanced and customizable
+shell for the Linux operating system that is described at \url{http://zsh.sourceforge.net}.
 
-During this laboratory assignment and subsequent assignments, we will securely communicate with the Bitbucket.org
-servers that will host our all of our projects.  In this laboratory assignment, we will perform all of the steps to
-configure the accounts on the departmental servers and the Bitbucket service.  Throughout the assignment, you should
-refer to the following Web site for additional information:
-\url{https://confluence.atlassian.com/display/BITBUCKET/Bitbucket+101}.  As you will be required to prepare a tutorial
-describing each step that you finish in this assignment, please be sure to keep a record of all of the steps that you
-complete and the challenges that you face.  You are also responsible for working with your team members to ensure that
-every member of the team is able to successfully complete each of the steps outlined in this assignment.
+\section*{Configuring the Z Shell}
 
-\begin{enumerate}
-	\item If you have never done so before, you must use the {\tt ssh-keygen} program to create secure-shell keys that
-		you can use to support your communication with the Bitbucket servers.  Type {\tt man ssh-keygen} and talk with
-		the members of your team to learn more about how to use this program.  What files does {\tt ssh-keygen} produce? 
-		Where does this program store these files?
-
-	\item If you do not already have a Bitbucket account, please go to the Bitbucket Web site and create one --- 
-		make sure that you use your {\tt allegheny.edu} email address so that you can create an unlimited number of free
-		Bitbucket repositories.
-
-	\item Now, you need to test to see if you can authenticate with the Bitbucket servers.  Open a terminal window on
-		your workstation and change into the directory where you will store your files for this laboratory assignment.
-		Then, please type the following command: {\tt git clone git@bitbucket.org:gkapfham/cs290f2013-lab1.git}.  If
-		everything worked correctly, you should be able to download all of the files that I used for the introductory
-		presentation in Computer Science 290 Fall 2013. Please resolve any problems that your encountered by first
-		reviewing the Bitbucket documentation and then working with your team members.
-
-	\item To ensure that you can prepare your own presentation using your own version of the files that you downloaded,
-		please review and discuss the files {\tt cs290F2013-introduction.html} and {\tt big.css}. You can learn about
-		this presentation framework by visiting: \url{https://github.com/tmcw/big}. Please ask the instructor if you
-		have questions about this source code.
-
-\end{enumerate}
+To start using the Z shell, hereafter abbreviated as zsh, you must open a terminal window and type {\tt zsh}.  Try to navigate
+your file system and run a program through zsh.  Do you notice any differences between this new shell and the one that you were
+using previously?  What is the name of the shell that is the default for the Ubuntu operating system? Which do you like better?
+Why?
 
 \section*{Creating a New Repository}
 
