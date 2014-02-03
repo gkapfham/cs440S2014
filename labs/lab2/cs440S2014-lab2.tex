@@ -16,7 +16,17 @@ language --- and many other languages as well --- provide libraries that support
 of files. In this laboratory assignment, you will implement your own file system traversal tool and use it to learn more about
 characteristics of the file system used by the Linux operating system.
 
-\section*{File System Traverasl}
+\section*{File System Traversal}
+
+For this laboratory assignment you should implement a file system traversal tool in the Java programming language (students who
+want to use a different programming language should first see the instructor before starting their implementation). Your program
+should use the JCommander command-line argument parsing tool, available for download from \url{http://jcommander.org/}, to accept
+as input all of the appropriate arguments. The tool should start at the directory specified by the user and then recursively
+traverse the file system until it either recursively visits all of files and directories or it recursively visits up to a
+chosen maximum number of files and directories. Students should consider using the methods provides by the {\tt java.io.File}
+class to perform \mbox{the traversal}.
+
+
 
 \section*{Summary of the Required Deliverables}
 
