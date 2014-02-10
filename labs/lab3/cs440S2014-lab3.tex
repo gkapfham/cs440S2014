@@ -53,9 +53,24 @@ additional information about the use of Git and Bitbucket: \url{https://confluen
 
 \end{enumerate}
 
-\section*{Using and Extending the Producer-Consumer Model}
+\section*{Understanding and Extending the Producer-Consumer Model}
 
+After you have carefully studied the source code of the Producer-Consumer model, you should compile and execute it.  What type of
+output does this program produce?  Will this program halt?  If yes, then how long will it take to halt?  If no, then why does it
+not halt? Finally, you should use the {\tt /usr/bin/time} program to time how long it takes to run the Producer-Consumer.
 
+In order to better understanding how this program works, you should run it and then use the {\tt ps -eLf} and {\tt ps aux}
+commands to track what Java processes are started when the model executes. You should also use the {\tt gnome-system-monitor} to
+learn more about this program's behavior (to run this program you can type {\tt monitor} in the Unity dash).  To the best of your
+ability, you should use these three programs --- and any others that you deem to be useful and relevant --- to better understand
+how the Producer-Consumer model creates processes and/or threads.
+
+As you will see from studying the source code, the current implementation of the Producer-Consumer model has several hard-coded
+variables that control its behavior. Leveraging the JCommander project that you learned how to use in a previous laboratory
+assignment, you should now implement a command-line interface for the Producer-Consumer model.  This interface should make it
+possible to specify whether or not debugging output must be produced, the number of data items that must be produced and consumed,
+and the total number of consumers.  Details about the command-line arguments are provided in the comments of the {\tt
+ProducerConsumerModel.java} file. 
 
 \section*{Experimental Study of Performance}
 
