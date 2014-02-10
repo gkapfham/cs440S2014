@@ -44,12 +44,12 @@ additional information about the use of Git and Bitbucket: \url{https://confluen
     share files with you.  Once you have done so, and only after I have shared the Git repository with you, please type the
     following command: {\tt git clone git@bitbucket.org:gkapfham/cs440s2014-share.git}.  If everything worked correctly, you
     should be able to download all of the files that you will need to use for this laboratory assignment. Please resolve any
-    problems that you encountered by first reviewing the Bitbucket documentation and then discussing the matter with your team. If
-    you are still not able to run the {\tt git clone} command, then please see the instructor.
+    problems that you encountered by first reviewing the Bitbucket documentation and then discussing the challenges with the Git
+    experts in this class. If you are still not able to run the {\tt git clone} command, then please see the instructor.
 
   \item Using your terminal window, you should browse the files that are in this Git repository.  In particular, please look in
-    the {\tt labs/lab3/src/} directory and use Vim to study the two Java programs that you find. What files are available for the
-    Producer-Consumer model?
+    the {\tt labs/lab3/src/} directory and use Vim to study the Java programs that you find. What files are used to implement the
+    producer-consumer model?
 
 \end{enumerate}
 
@@ -65,12 +65,14 @@ learn more about this program's behavior (to run this program you can type {\tt 
 ability, you should use these three programs --- and any others that you deem to be useful and relevant --- to better understand
 how the ProducerConsumerModel creates processes and/or threads.
 
-As you will see from studying the source code, the current implementation of the {\tt ProducerConsumerModel} has several hard-coded
-variables that control its behavior. Leveraging the JCommander project that you learned how to use in a previous laboratory
-assignment, you should now implement a command-line interface for the {\tt ProducerConsumerModel}.  This interface should make it
-possible to specify whether or not debugging output must be produced, the number of data items that must be produced and consumed,
-and the total number of consumers.  Details about the command-line arguments are provided in the comments of the {\tt
-ProducerConsumerModel.java} file. 
+\begin{sloppypar}
+  As you will see from studying the source code, the current implementation of the {\tt ProducerConsumerModel} has several
+  hard-coded variables that control its behavior. Leveraging the JCommander system that you learned how to use in a previous
+  laboratory assignment, you should now implement a command-line interface for the {\tt ProducerConsumerModel}.  This interface
+  should make it possible to specify whether or not debugging output must be produced, the number of data items that must be
+  produced and consumed, and the total number of consumers.  Details about the command-line arguments are provided in the comments
+  of the {\tt ProducerConsumerModel.java} file. 
+\end{sloppypar}
 
 \section*{Understanding Defects in Multi-Threaded Programs}
 
@@ -78,25 +80,25 @@ ProducerConsumerModel.java} file.
   can take steps to systematically explore what happens if you make mistakes when implementing multi-threaded Java programs.
   Please ensure that you carefully make the following changes, recompile the program, execute the program, record the incorrect
   program output, and comment on why the output is evident.  Once you are done making the required defective implementations of
-  the program, please return the modified class to the correct state!
+  the program, please return the modified code to the correct state!
 
 \begin{enumerate}
 
   \item For the {\tt get} and {\tt put} methods inside of the {\tt CubbyHole}, systematically add a new method signature that does
-    not declare a method to be {\tt synchronized}.  That is, you should first run the {\tt ProducerConsumerModel} with just the
+    not declare the method to be {\tt synchronized}.  That is, you should first run the {\tt ProducerConsumerModel} with just the
     incorrect {\tt get}, then with just the incorrect {\tt put}, and finally with both the wrong {\tt get} and {\tt put}.   What
     does the output of the defective {\tt ProducerConsumerModel} look like?  How can you explain this output?  
 
   \item Now, keep the version of the {\tt get} and {\tt put} methods that do not use the {\tt synchronized} keyword and
     separately comment out the {\tt while} loop in both of the {\tt get} and {\tt put} methods.  Finally, you should separately
     comment out the call to the {\tt notifyAll} method at the end of both of these methods. What does the output of each of these
-    {\tt ProducerConsumerModel}s look like? Can you explain why these defects produce this output?
+    {\tt ProducerConsumerModel}s look like? Can you explain why these defects produce the output that they do?
 
 \end{enumerate}
 
 \section*{Experimental Study of Performance}
 
-  Now, you should use the {\em correct} implementation of the {\tt ProducerConsumerModel} to conduct an experiment.  You should
+  Now, you should use the correct implementation of the {\tt ProducerConsumerModel} to conduct an experiment.  You should
   measure the time overhead that is required to consume 10, 100, 1000, and 10,000 different data items for three different numbers
   of consumers.  For example, you might use two, four, and eight different consumer threads for all of the different number of
   data items.  You should conduct each individual experiment at least five times in order to facilitate the calculation of
@@ -113,15 +115,15 @@ ProducerConsumerModel.java} file.
 This assignment invites you to submit printed and signed versions of the following deliverables: 
 
   \begin{enumerate}
-    \item A one paragraph discussion of how multi-threaded Java programs use {\tt synchronized} 
+    \item A paragraph that explains how multi-threaded Java programs use {\tt synchronized} 
     \item A detailed discussion of the execution behavior of a multi-threaded Java program
     \item A comprehensive analysis of the output of each defective multi-threaded Java program
     \item The report from an experimental study that characterizes the performance of the model 
   \end{enumerate}
 
 Students are strongly encouraged to write their laboratory report in \LaTeX~and use tools such as the R language for statistical
-computation and Graphviz to better view and understand the empirical results. Please see the instructor if you have questions
-about these deliverables.
+computation to better analyze and visualize the empirical results. Please see the instructor if you have questions about the
+requirements for these deliverables.
 
 In adherence to the honor code, students should complete this assignment on an individual basis. While it is appropriate for
 students in this class to have high-level conversations about the assignment, it is necessary to distinguish carefully between the
