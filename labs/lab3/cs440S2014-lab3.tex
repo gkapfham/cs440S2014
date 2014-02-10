@@ -10,17 +10,17 @@
 
 \section*{Introduction}
 
-Processes and threads are commonly used by the operating system itself and the programs that run on the operating system.  In this
-laboratory assignment, you will download, use, extend, and experiment with a multi-threaded producer-consumer model.  The
-producer-consumer model, sometimes known as the bounded-buffer model, illustrates non-deterministic execution of threads that
+Processes and threads are commonly used by the operating system itself and by the programs that run on the operating system.  In
+this laboratory assignment, you will download, use, extend, and experiment with a multi-threaded producer-consumer model.  The
+producer-consumer model, sometimes known as a bounded-buffer model, illustrates non-deterministic execution of threads that
 share a common, fixed-size buffer.  In this assignment, you will download and use a working version of this model.  Then, you will
-add some features to the model to enable you to experiment with it more effectively.  Finally, you will systematically break
-various parts of the model in order to observe what can go wrong when implementing multi-threaded programs.
+add some features to the model that enable you to experiment with it more effectively.  Finally, you will systematically break
+various parts of the model in order to observe what can go wrong when implementing multi-threaded Java programs.
 
 \section*{Accessing the Producer-Consumer Model}
 
 During this laboratory assignment, and some subsequent assignments, we will securely communicate with the Bitbucket.org servers
-that will host the source code for our assignment. Students who are already comfortable with using Git and Bitbucket may skip the
+that host the source code for our assignment. Students who are already comfortable with using Git and Bitbucket may skip the
 majority of these steps and simply ask the instructor to share the course repository with them.  For those students who are not
 yet using Git and Bitbucket, this laboratory assignment will teach you all of the steps needed to configure the accounts on the
 departmental servers and the Bitbucket service.  Throughout the assignment, you should refer to the following Web site for
@@ -30,7 +30,7 @@ additional information about the use of Git and Bitbucket: \url{https://confluen
 	
   \item If you have never done so before, you must use the {\tt ssh-keygen} program to create secure-shell keys that you
     can use to support your communication with the Bitbucket servers.  Type {\tt man ssh-keygen} and talk with the
-    members of your team to learn more about how to use this program.  What files does {\tt ssh-keygen} produce?  Where
+    instructor to learn more about how to use this program.  What files does {\tt ssh-keygen} produce?  Where
     does this program store these files?
 
   \item If you do not already have a Bitbucket account, please go to the Bitbucket Web site and create one --- 
@@ -41,7 +41,7 @@ additional information about the use of Git and Bitbucket: \url{https://confluen
     you have correctly configured your Bitbucket account.  Now, ask the instructor to share the course's Git repository with you.
     Open a terminal window on your workstation and change into the directory where you will store your files for this course.  For
     instance, you might have made a {\tt cs440S2014/} directory that will contain the Git repository that I will always use to
-    share files with you.  Once you have done so and only after I have shared the Git repository with you, please type the
+    share files with you.  Once you have done so, and only after I have shared the Git repository with you, please type the
     following command: {\tt git clone git@bitbucket.org:gkapfham/cs440s2014-share.git}.  If everything worked correctly, you
     should be able to download all of the files that you will need to use for this laboratory assignment. Please resolve any
     problems that you encountered by first reviewing the Bitbucket documentation and then discussing the matter with your team. If
@@ -63,22 +63,22 @@ In order to better understanding how this program works, you should run it and t
 commands to track what Java processes are started when the model executes. You can also use the {\tt gnome-system-monitor} to
 learn more about this program's behavior (to run this program you can type {\tt monitor} in the Unity dash).  To the best of your
 ability, you should use these three programs --- and any others that you deem to be useful and relevant --- to better understand
-how the Producer-Consumer model creates processes and/or threads.
+how the ProducerConsumerModel creates processes and/or threads.
 
-As you will see from studying the source code, the current implementation of the Producer-Consumer model has several hard-coded
+As you will see from studying the source code, the current implementation of the {\tt ProducerConsumerModel} has several hard-coded
 variables that control its behavior. Leveraging the JCommander project that you learned how to use in a previous laboratory
-assignment, you should now implement a command-line interface for the Producer-Consumer model.  This interface should make it
+assignment, you should now implement a command-line interface for the {\tt ProducerConsumerModel}.  This interface should make it
 possible to specify whether or not debugging output must be produced, the number of data items that must be produced and consumed,
 and the total number of consumers.  Details about the command-line arguments are provided in the comments of the {\tt
 ProducerConsumerModel.java} file. 
 
 \section*{Understanding Defects in Multi-Threaded Programs}
 
-After you have finished writing the source code to support the command-line arguments for the Producer-Consumer model, you can
-take steps to systematically explore what happens if you make mistakes when implementing multi-threaded Java programs. Please
-ensure that you carefully make the following changes, recompile the program, execute the program, record the incorrect program
-output, and comment on why the output is evident.  Once you are done making the required defective implementations of the program,
-please return the modified class to the correct state!
+  After you have finished writing the source code to support the command-line arguments for the {\tt ProducerConsumerModel}, you
+  can take steps to systematically explore what happens if you make mistakes when implementing multi-threaded Java programs.
+  Please ensure that you carefully make the following changes, recompile the program, execute the program, record the incorrect
+  program output, and comment on why the output is evident.  Once you are done making the required defective implementations of
+  the program, please return the modified class to the correct state!
 
 \begin{enumerate}
 
