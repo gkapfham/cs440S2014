@@ -13,8 +13,8 @@
 Processes and threads are commonly used by the operating system itself and by the programs that run on the operating
 system. In the previous laboratory assignment you learned how to implement and evaluate Java programs that use the {\tt
   synchronized} keyword to create a multi-threaded produced consumer model. In this laboratory assignment, you will
-download, use, extend, and experiment with a multi-threaded producer-consumer model that uses semaphores,  As in the
-previous assignment, you will add some features to the model that enable you to experiment with it more effectively.
+download, use, extend, and further investigate with a multi-threaded producer-consumer model that uses semaphores,  As
+in the previous assignment, you will add some features to the model that enable you to study it more effectively.
 Finally, you will systematically break various parts of the model in order to observe what can go wrong when
 implementing multi-threaded Java programs that use semaphores.
 
@@ -29,12 +29,12 @@ to study the Java programs that you find. What files are used to implement the p
 \section*{Understanding and Extending the Producer-Consumer Model}
 
 In this laboratory session, we will use code segments from Vijay K.\ Garg's book, {\em Concurrent and Distributed
-  Computing in Java}, to learn more about how to implement a producer-consumer model using semaphores.  Before you start
+  Computing in Java}, to learn more about how to implement a producer-consumer model with semaphores.  Before you start
 to modify the programs that you received through the Git repository, take some time to learn more about the history of
 the term semaphore.  What is the meaning of this term when it is used in a context not connected to the discipline of
-computer science? What was the first paper to propose the idea of the semaphore? Finally, it is important to note that
-this program uses both binary and counting semaphores. What are the similarities and differences between these two types
-of semaphores?
+computer science? What was the first paper to propose the use of semaphores in computer science? Finally, it is
+important to note that this program uses both binary and counting semaphores. What are the similarities and differences
+between these two types of semaphores?
 
 After you have carefully studied the source code of the producer-consumer model, you can compile and execute it.  What
 type of output does this program produce?  Will this program halt?  If yes, then how long will it take to halt?  If no,
