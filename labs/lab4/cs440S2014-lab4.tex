@@ -41,52 +41,44 @@ type of output does this program produce?  Will this program halt?  If yes, then
 then why does it not halt? How is this program similar to and different from the producer-consumer model that you used
 in the last assignment?
 
-As you will see from studying the source code, the current implementation of the {\tt ProducerConsumer} always produces
-debugging output. Leveraging the JCommander system that you learned how to use in a previous laboratory assignment, you
-should now implement a command-line interface for the {\tt ProducerConsumer}. First, you should add a parameter that can
-indicate whether or not the {\tt ProducerConsumer} should produce debugging output.  In order to implement debugging
-output correctly, you will need to find each of the classes that execute output-producing statements.  Next, you should
-notice that the current implementation of the {\tt ProducerConsumer} a single producer and consumer.  To extend the
-program, you should add a command-line argument for the number of consumers.
+\begin{sloppypar} 
+  As you will see from studying the source code, the current implementation of the {\tt
+    ProducerConsumer} always produces debugging output. Leveraging the JCommander system that you learned how to use in
+  a previous laboratory assignment, you should now implement a command-line interface for the {\tt ProducerConsumer}.
+  First, you should add a parameter that can indicate whether or not the {\tt ProducerConsumer} should produce debugging
+  output.  To implement debugging output correctly, you will need to find each of the classes that execute
+  output-producing statements.  Next, you should notice that the current implementation of the {\tt ProducerConsumer}
+  only creates a single producer and consumer.  To extend the program, you should add a command-line argument that
+  allows the user to specify the number of consumers.  
+\end{sloppypar}
+
+Finally, you should notice that the {\tt ProducerConsumer} does not does not furnish any information about the specific
+thread that is producing the debugging output.  As such, you should further extend the debugging output so that the name
+of the thread is also displayed. To add this feature, you may need to change the inheritance hierarchy for the {\tt
+  Producer} and {\tt Consumer} classes.  You will also need to determine which methods provided by {\tt
+  java.lang.Thread} return information about the name of the thread that is currently executing.
 
 \section*{Understanding Defects in Multi-Threaded Programs}
 
-After you have finished writing the source code to support the command-line arguments for the {\tt
-  ProducerConsumerModel}, you can take steps to systematically explore what happens if you make mistakes when
-implementing multi-threaded Java programs.  Please ensure that you carefully make the following changes, recompile the
-program, execute the program, record the incorrect program output, and comment on why the output is evident.  Once you
-are done making the required defective implementations of the program, please return the modified code to the correct
-state!
+After you have finished writing the source code to support the command-line arguments for the {\tt ProducerConsumer},
+you can take steps to explore what happens if you make mistakes when implementing multi-threaded Java programs that use
+semaphores.  Please ensure that you carefully make the following changes, recompile the program, execute the program,
+record the incorrect program output, and comment on why the output is evident.  Once you are done making the required
+defective implementations of the program, please return the modified code to the correct state!
 
-\begin{enumerate}
+\begin{enumerate} 
+ 
+  \item Comment out the first two calls to {\tt P} in both the {\tt deposit} and {\tt fetch} methods.  For example, in
+    the {\tt deposit} method you would produce the following new source code statements.  What output does the program
+    produce?  Why does it produce this output?  
 
-  \item For the {\tt get} and {\tt put} methods inside of the {\tt CubbyHole}, systematically add a new method signature
-    that does not declare the method to be {\tt synchronized}.  That is, you should first run the {\tt
-      ProducerConsumerModel} with just the incorrect {\tt get}, then with just the incorrect {\tt put}, and finally with
-    both the wrong {\tt get} and {\tt put}.   What does the output of the defective {\tt ProducerConsumerModel} look
-    like?  How can you explain this output?  
-
-  \item Now, keep the version of the {\tt get} and {\tt put} methods that do not use the {\tt synchronized} keyword and
-    separately comment out the {\tt while} loop in both of the {\tt get} and {\tt put} methods.  Finally, you should
-    separately comment out the call to the {\tt notifyAll} method at the end of both of these methods.  What does the
-    output of each of these {\tt ProducerConsumerModel}s look like? Can you explain why these defects produce the output
-    that they do?
+    \begin{verbatim}
+       //isFull.P(); // wait if buffer is full
+       //mutex.P(); // ensures mutual exclusion
+    \end{verbatim} 
 
 \end{enumerate}
 
-\section*{Experimental Study of Performance}
-
-Now, you should use the correct implementation of the {\tt ProducerConsumerModel} to conduct an experiment.  You should
-measure the time overhead that is required to consume 10, 100, 1000, and 10,000 different data items for three different
-numbers of consumers.  For example, you might use two, four, and eight different consumer threads for all of the
-different number of data items.  You should conduct each individual experiment at least five times in order to
-facilitate the calculation of arithmetic means.  After making sure that your timings do not include the cost associated
-with performing console output, you should collect execution timings of the {\tt ProducerConsumerModel}.  
-
-In preparation for writing your report, you may calculate arithmetic means by implementing your own Java program or by
-using the R language for statistical computing.  Moreover, your report should explain your experimental goals and design
-by clearly describing the commands that you type and the order in which they were typed.  You report should also include
-tables of results that furnish the running times for each of the different {\tt ProducerConsumerModel} configurations.  
 
 \section*{Summary of the Required Deliverables}
 
