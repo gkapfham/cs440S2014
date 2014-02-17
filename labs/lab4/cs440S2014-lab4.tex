@@ -28,24 +28,25 @@ to study the Java programs that you find. What files are used to implement the p
 
 \section*{Understanding and Extending the Producer-Consumer Model}
 
+In this laboratory session, we will use code segments from Vijay K.\ Garg's book, {\em Concurrent and Distributed
+  Computing in Java}, to learn more about how to implement a producer-consumer model using semaphores.  Before you start
+to modify the programs that you received through the Git repository, take some time to learn more about the history of
+the term semaphore.  What is the meaning of this term when it is used in a context not connected to the discipline of
+computer science? What was the first paper to propose the idea of the semaphore? Finally, it is important to note that
+this program uses both binary and counting semaphores. What are the similarities and differences between these two types
+of semaphores?
+
 After you have carefully studied the source code of the producer-consumer model, you can compile and execute it.  What
 type of output does this program produce?  Will this program halt?  If yes, then how long will it take to halt?  If no,
 then why does it not halt?  Finally, you should use the {\tt /usr/bin/time} program to time how long it takes to run the
 {\tt ProducerConsumer}.
 
-In order to better understanding how this program works, you should run it and then use the {\tt ps -eLf} and {\tt ps
-  aux} commands to track what Java processes are started when the model executes. You can also use the {\tt
-  gnome-system-monitor} to learn more about this program's behavior (to run this program you can type {\tt monitor} in
-the Unity dash).  To the best of your ability, you should use these three programs --- and any others that you deem to
-be useful and relevant --- to better understand how the {\tt ProducerConsumerModel} creates processes and/or threads.
-
-\begin{sloppypar} As you will see from studying the source code, the current implementation of the {\tt
-    ProducerConsumerModel} has several hard-coded variables that control its behavior. Leveraging the JCommander system
-  that you learned how to use in a previous laboratory assignment, you should now implement a command-line interface for
-  the {\tt ProducerConsumerModel}.  This interface should make it possible to specify whether or not debugging output
-  must be produced, the number of data items that must be produced and consumed, and the total number of consumers.
-  Details about the command-line arguments are provided in the comments of the {\tt ProducerConsumerModel.java} file.
-\end{sloppypar}
+As you will see from studying the source code, the current implementation of the {\tt ProducerConsumer} has several
+hard-coded variables that control its behavior. Leveraging the JCommander system that you learned how to use in a
+previous laboratory assignment, you should now implement a command-line interface for the {\tt ProducerConsumer}.
+This interface should make it possible to specify whether or not debugging output must be produced, the number of data
+items that must be produced and consumed, and the total number of consumers.  Details about the command-line arguments
+are provided in the comments of the {\tt ProducerConsumer.java} file.
 
 \section*{Understanding Defects in Multi-Threaded Programs}
 
