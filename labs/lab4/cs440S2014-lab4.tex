@@ -20,41 +20,11 @@ implementing multi-threaded Java programs that use semaphores.
 
 \section*{Accessing the Producer-Consumer Model}
 
-During this laboratory assignment, and some subsequent assignments, we will securely communicate with the Bitbucket.org
-servers that host the source code for our assignment. Students who are already comfortable with using Git and Bitbucket
-may skip the majority of these steps and simply ask the instructor to share the course repository with them.  For those
-students who are not yet using Git and Bitbucket, this laboratory assignment will teach you all of the steps needed to
-configure the accounts on the departmental servers and the Bitbucket service.  Throughout the assignment, you should
-refer to the following Web site for additional information about the use of Git and Bitbucket:
-\url{https://confluence.atlassian.com/display/BITBUCKET/Bitbucket+101}.  
-
-\begin{enumerate}
-
-  \item If you have never done so before, you must use the {\tt ssh-keygen} program to create secure-shell keys that you
-    can use to support your communication with the Bitbucket servers.  Type {\tt man ssh-keygen} and talk with the
-    instructor to learn more about how to use this program.  What files does {\tt ssh-keygen} produce?  Where does this
-    program store these files?
-
-  \item If you do not already have a Bitbucket account, please go to the Bitbucket Web site and create one --- make sure
-    that you use your {\tt allegheny.edu} email address so that you can create an unlimited number of free Bitbucket
-    repositories. Then, upload your ssh key to Bitbucket.
-
-  \item Now, you need to test to see if you can authenticate with the Bitbucket servers.  First, show the course
-    instructor that you have correctly configured your Bitbucket account.  Now, ask the instructor to share the course's
-    Git repository with you.  Open a terminal window on your workstation and change into the directory where you will
-    store your files for this course.  For instance, you might have made a {\tt cs440S2014/} directory that will contain
-    the Git repository that I will always use to share files with you.  Once you have done so, and only after I have
-    shared the Git repository with you, please type the following command: {\tt git clone
-      git@bitbucket.org:gkapfham/cs440s2014-share.git}.  If everything worked correctly, you should be able to download
-    all of the files that you will need to use for this laboratory assignment. Please resolve any problems that you
-    encountered by first reviewing the Bitbucket documentation and then discussing the challenges with the Git experts
-    in this class. If you are still not able to run the {\tt git clone} command, then please see the instructor.
-
-  \item Using your terminal window, you should browse the files that are in this Git repository.  In particular, please
-    look in the {\tt labs/lab3/src/} directory and use Vim to study the Java programs that you find. What files are used
-    to implement the producer-consumer model?
-
-\end{enumerate}
+As in the previous assignment, you should change into directory for the Git repository that I use to share files with
+you. Now, you can type the command {\tt git pull} to retrieve all of the files for this laboratory assignment. If this
+step did not work correctly, then please see the instructor.  Finally, you should use your terminal window to browse
+the files that are in this Git repository.  In particular, please look in the {\tt labs/lab4/src/} directory and use Vim
+to study the Java programs that you find. What files are used to implement the producer-consumer model?
 
 \section*{Understanding and Extending the Producer-Consumer Model}
 
