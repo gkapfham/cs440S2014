@@ -38,15 +38,16 @@ of semaphores?
 
 After you have carefully studied the source code of the producer-consumer model, you can compile and execute it.  What
 type of output does this program produce?  Will this program halt?  If yes, then how long will it take to halt?  If no,
-then why does it not halt?  Finally, you should use the {\tt /usr/bin/time} program to time how long it takes to run the
-{\tt ProducerConsumer}.
+then why does it not halt? How is this program similar to and different from the producer-consumer model that you used
+in the last assignment?
 
-As you will see from studying the source code, the current implementation of the {\tt ProducerConsumer} has several
-hard-coded variables that control its behavior. Leveraging the JCommander system that you learned how to use in a
-previous laboratory assignment, you should now implement a command-line interface for the {\tt ProducerConsumer}.
-This interface should make it possible to specify whether or not debugging output must be produced, the number of data
-items that must be produced and consumed, and the total number of consumers.  Details about the command-line arguments
-are provided in the comments of the {\tt ProducerConsumer.java} file.
+As you will see from studying the source code, the current implementation of the {\tt ProducerConsumer} always produces
+debugging output. Leveraging the JCommander system that you learned how to use in a previous laboratory assignment, you
+should now implement a command-line interface for the {\tt ProducerConsumer}. First, you should add a parameter that can
+indicate whether or not the {\tt ProducerConsumer} should produce debugging output.  In order to implement debugging
+output correctly, you will need to find each of the classes that execute output-producing statements.  Next, you should
+notice that the current implementation of the {\tt ProducerConsumer} a single producer and consumer.  To extend the
+program, you should add a command-line argument for the number of consumers.
 
 \section*{Understanding Defects in Multi-Threaded Programs}
 
