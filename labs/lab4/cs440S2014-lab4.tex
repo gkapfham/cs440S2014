@@ -72,10 +72,24 @@ defective implementations of the program, please return the modified code to the
     the {\tt deposit} method you would produce the following new source code statements.  What output does the program
     produce?  Why does it produce this output?  
 
+    \vspace*{-.1in}
     \begin{verbatim}
        //isFull.P(); // wait if buffer is full
        //mutex.P(); // ensures mutual exclusion
     \end{verbatim} 
+    \vspace*{-.3in}
+
+  \item After returning the source code to the correct state, you should now comment out the calls to {\tt V} inside of
+    the {\tt deposit} method, thus yielding the source code written below. What output does the program now produce? Can
+    you explain why it produces this output? 
+
+    \vspace*{-.1in}
+    \begin{verbatim}
+       //mutex.V(); 
+       //isEmpty.V(); // notify any waiting consumer
+    \end{verbatim} 
+    \vspace*{-.3in}
+
 
 \end{enumerate}
 
