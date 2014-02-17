@@ -90,9 +90,20 @@ defective implementations of the program, please return the modified code to the
     \end{verbatim} 
     \vspace*{-.3in}
 
-
 \end{enumerate}
 
+\section*{Reflecting on the Producer-Consumer Models}
+
+Now that you have extended your producer-consumer model and taken steps to better understand the types of defects that
+are evident in multi-threaded code that uses semaphores, you can start to further study the behavior of the model.  Try
+to construct two, four, and six {\tt Consumer}s instead of using a single {\tt Consumer}. Now, execute the program again
+and let it run for a longer period of time, making sure to record a portion of the output. Can you find any pattern in
+the output in terms of which {\tt Consumer} thread the operating system kernel schedules?  As in the previous laboratory
+assignment, you should consider the use of operating system tools that you can use to better understand the behavior of
+the multi-threaded producer-consumer model.
+
+Take some time to compare and contrast the two producer-consumer models that you have implemented in these two
+laboratory assignments.
 
 \section*{Summary of the Required Deliverables}
 
