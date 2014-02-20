@@ -121,31 +121,58 @@ responsible for checking the white board for status updates.
 \begin{figure}[t]
   \centering
   \includegraphics{fig1-27}
-  \caption{Client Server Communication Involving Both the Client and the Kernel.}
+  \caption{Client-Server Communication Involving the Client, a Server, and the Kernel.}
   \label{fig:clientserver}
 \end{figure}
 
-\item ({\bf 10 Points}) The operating system is a resource manager for the hardware provided by the computer.  Answer
-  the following questions about the management of computer hardware.
+\item ({\bf 10 Points}) There are many basic concepts that under gird the fundamentals of operating systems.  Answer the
+  following questions about basic operating systems concepts.
 
   \begin{enumerate}
           
-  \item ({\bf 2 Points}) The computer contains resources that must be shared through either time or space multiplexing.
-    What are these two types of multiplexing? What is an example of a resource that can be shared with each of these
-    methods?
-   
-  \item ({\bf 5 Points}) A typical memory hierarchy contains five levels.  Arrange the levels of the memory hierarchy so
-    that the fastest and smallest type of memory is at the top of your diagram and the slowest and largest is at the
-    bottom.
-  
-  \item ({\bf 3 Points}) There are three canonical strategies for performing input and output with the
-    kernel and device drivers.  What are these strategies? What are their trade-offs?
+  \item ({\bf 4 Points}) A real-time operating system must schedule tasks to guarantee that a specified deadline will be
+    met.  Draw a graph with a horizontal axis called ``time'', a vertical axis called ``utility'', and a vertical line
+    at point $D$ on the horizontal axis.  Now, please draw a utility curve that represents the challenge associated with
+    scheduling in a real-time operating system. Why did you draw this curve the way that you did?
+
+  \item ({\bf 3 Points}) The shell of an operating system allows for the composition of processes using the pipe and
+    filter architecture.  In the following code segment, what is the pipe? What is the filter? Why is this a good mode
+    of interaction with the operating system?
+
+    \begin{quote}
+      {\tt cat file1 file2 file3 | sort > /dev/lp \&}
+    \end{quote}
+
+  \item ({\bf 3 Points}) Figure~\ref{fig:clientserver} furnishes an example of a client communicating with the server
+    with the support of the operating system kernel. Please outline all of the steps that must take place to support the
+    communication between ``Machine 1'' and ``Machine 2''. 
 
   \end{enumerate}
 
   \newpage
 
+\item ({\bf 10 Points}) Most, if not all, operating systems provide a kernel and many support virtualization. Answer the
+  following questions about kernels and virtualization methods.
 
+  \begin{enumerate}
+
+    \item ({\bf 2 Points}) Most virtualization techniques distinguish between the guest operating system and the host
+      operating system.  What is the meaning of these two terms? 
+
+    \item ({\bf 3 Points}) How does the Java virtual machine support the standard of write-once run-anywhere? Your
+      response to this question should use a properly labeled diagram.
+
+    \item ({\bf 3 Points}) There are three representative types of operating systems kernels: microkernels, exokernels,
+      and monolithic kernels. Using a properly labeled diagram for each definition, explain these types of kernels. What
+      are their strengths and weaknesses?
+
+    \item ({\bf 2 Points}) When implementing the process scheduler for the kernel, it is normally useful to separate
+      policy and mechanism.  What does this maxim mean? \mbox{Why is it important}?
+
+
+  \end{enumerate}
+
+  \newpage
 
   \begin{figure}[t]
     \centering
