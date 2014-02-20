@@ -169,6 +169,24 @@ responsible for checking the white board for status updates.
     \item ({\bf 2 Points}) When implementing the process scheduler for the kernel, it is normally useful to separate
       policy and mechanism.  What does this maxim mean? \mbox{Why is it important}?
 
+  \end{enumerate}
+
+  \newpage
+  
+\item ({\bf 10 Points}) The process is the main ``unit of work'' in an operating system.  Answer the following questions
+  about processes and how they are managed by the operating system.
+
+  \begin{enumerate}
+
+    \item ({\bf 4 Points}) There are four events that can lead to the creation of a process. \mbox{What are they}?
+
+    \item ({\bf 4 Points}) A process can be in one of three states: running, blocked, and ready. Using circles to
+      represent each of these states and directed edges to denote transitions between these states, draw a process state
+      diagram. All states and edges must have labels.
+
+    \item ({\bf 2 Points}) The operating system maintains a process table that stores information about each process
+      that is currently executing on a computer. Using concrete examples whenever possible, please name and describe at
+      least two of these fields.
 
   \end{enumerate}
 
@@ -181,6 +199,43 @@ responsible for checking the white board for status updates.
     \label{fig:pandt}
   \end{figure}
 
+
+\item ({\bf 10 Points}) The operating system must provide primitives for scheduling threads and processes in a manner
+  that avoids concurrency control problems. Answer the following questions about threads, processes, and concurrent
+  execution.
+
+\begin{enumerate}
+
+  \item Figure~\ref{fig:pandt} shows two different canonical configurations of processes and threads. Answer the
+    following questions about the trade-offs that are evident in this diagram.
+
+    \begin{enumerate}
+
+      \item ({\bf 5 Points}) Describe a scenario in which Figure~\ref{fig:pandt}(a) is:
+
+        \begin{enumerate}
+
+          \item A good option for concurrent execution
+          \item A poor option for concurrent execution
+
+        \end{enumerate}
+
+      \item Describe a scenario in which Figure~\ref{fig:pandt}(b) is:
+
+        \begin{enumerate}
+
+          \item A good option for concurrent execution
+          \item A poor option for concurrent execution
+
+        \end{enumerate}
+
+      \item ({\bf 5 Points}) Many kernel-mode and user-mode programs contain critical region(s) that represent code
+        segments that must be executed in mutual exclusion.  What is mutual exclusion? What are the four conditions that
+        must be supported by any technique that aims to enforce mutual exclusion for a program's critical region?
+
+    \end{enumerate}
+
+\end{enumerate}
 
 \end{enumerate}
 
