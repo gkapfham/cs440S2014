@@ -8,16 +8,21 @@
 \begin{document} \MYTITLE{Laboratory Assignment Five: Using Simulation to Evaluate Scheduling Algorithms} 
 \MYHEADERS{Laboratory Assignment Five}{Due: March 3, 2014}
 
+% \vspace*{-.32in}
+
 \section*{Introduction}
 
   Modern operating systems normally have a kernel that runs a scheduler.  The goal of the scheduler is to pick which
   process will next run on the central processing unit (CPU).  There are a wide variety of scheduling algorithms, such
-  as first-come first-served (FCSF), shortest job first (SJF), round-robin (RR), and priority scheduling.  Since these
-  algorithms are normally very complex and often difficult to study in an analytical fashion, operating systems
-  designers may use simulators to better understand their trade-offs in efficiency and fairness. In this laboratory
-  assignment, you will use a scheduling simulator, implemented by Jim Weller, to evaluate several scheduling algorithms.
+  as first-come first-served (FCSF), shortest job first (SJF), round-robin (RR), and priority scheduling.  Since
+  behavior of these algorithms is workload-driven and they are often difficult to study in an analytically, operating
+  systems designers may use simulators to better understand their trade-offs in efficiency and fairness. In this
+  laboratory assignment, you will use a scheduling simulator, implemented by Jim Weller, to evaluate several scheduling
+  algorithms.
 
-\section*{Understanding the Simulation of Schedulers}
+% \section*{Understanding the Simulation of Schedulers}
+
+\section*{Using Simulation to Evaluate Process Schedulers}
 
   To learn more about the simulator that we will use to study the scheduling algorithms, please visit the following Web
   site: \url{http://jimweller.com/jim-weller/jim/java_proc_sched/}. Next, use your terminal window to navigate into the
@@ -44,7 +49,29 @@
   metrics. Of course, it is also important to find a scheduler that executes processes in a manner that also leads to low
   standard deviations for these evaluation metrics. What were the metric values for the past run of the simulator?
 
-\section*{Using Simulation to Evaluate Schedulers}
+
+  In this laboratory assignment, you will use the scheduler simulator to evaluate the effectiveness of the first-come
+  first-serve, shortest job first, round-robin, and priority scheduling algorithms.  In the first phase of your study,
+  you should develop a better understanding of the algorithms and the simulator by using the {\tt jobList.dat} file
+  provided in the version control repository. During all of your experiments, you should record the mean values for
+  response, turnaround, and wait time and note whether the standard deviations are high or low. You should also run
+  every algorithm with and without prioritization. When you are done with this study, you should be able to explain
+  which scheduling algorithm is best suited to run this listing of three processes. 
+
+  After you have finished this preliminary study, you should create a job list that contains at least ten to twenty
+  process descriptions.  Then, you should repeat the study again, using all combinations of algorithm and priority
+  preference.  Again, you should be able to determine which algorithm is the best and explain how you arrived at this
+  conclusion. Finally, you should use the random workload generator provided by the scheduler to study at least five
+  additional job lists. Students who would like to speed up the simulation time are encouraged to try higher value for
+  the frames per second (FPS) setting. As in the previous experiments, you should try to draw a conclusion as to which
+  algorithm is the best and be able to, whenever possible, explain why it is the best.
+
+  After you have finished running all of the simulations, you should prepare a comprehensive report of your findings.
+  Using tables of data and paragraphs of results analysis, the report must highlight and talk about all of your
+  experimental results. In advance of the discussion of your findings, the report should clearly explain how each of the
+  scheduling algorithms actually works. Also, the report should clearly define the evaluation metrics and discuss the
+  threats to the validity of the simulation study. Students are encouraged to write their reports in the
+  \LaTeX~formatting language and use the R language for statistical computation to visualize and analyze their results.
 
 \section*{Summary of the Required Deliverables}
 
@@ -52,13 +79,27 @@ This assignment invites you to submit printed and signed versions of the followi
 
 \begin{enumerate}
 
-  \item A clear description of the term semaphore, with comments about the its historical origins 
+  \itemsep0in
 
-  \item A revised and extended implementation of the producer-consumer model
+  \item A screenshot demonstrating that you were able to correctly configure and use the simulator
 
-  \item A comprehensive analysis of the output of each defective multi-threaded Java program
+  \item All of the {\tt .dat} files used in the simulation studies that you conduct
 
-  \item A reflection of the characteristics of the two different producer-consumer models
+  \item A comprehensive report on all of the runs of the scheduling simulator that includes:
+
+  \begin{enumerate}
+
+  \itemsep0in
+    \item A clear description of each scheduling algorithm
+    \item A commentary on how the incorporation of priority influences scheduling decisions
+    \item A formal definition of the evaluation metrics
+    \item A description of the job workloads used during the simulations
+    \item A detailed analysis of the results from running the simulations
+    \item A statement of which scheduling algorithm is best suited for a modern operating system
+
+  \end{enumerate}
+
+  \item A reflective discussion of the challenges that you encountered when completing this assignment
 
 \end{enumerate}
 
@@ -67,7 +108,5 @@ for students in this class to have high-level conversations about the assignment
 carefully between the student who discusses the principles underlying a problem with others and the student who produces
 assignments that are identical to, or merely variations on, someone else's work.  As such, deliverables that are nearly
 identical to the work of others will be taken as evidence of violating the \mbox{Honor Code}.  
-
-
 
   \end{document}
