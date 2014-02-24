@@ -10,102 +10,17 @@
 
 \section*{Introduction}
 
-Processes and threads are commonly used by the operating system itself and by the programs that run on the operating
-system. In the previous laboratory assignment you learned how to implement and evaluate Java programs that use the {\tt
-  synchronized} keyword to create a multi-threaded produced consumer model. In this laboratory assignment, you will
-download, use, extend, and further investigate with a multi-threaded producer-consumer model that uses semaphores,  As
-in the previous assignment, you will add some features to the model that enable you to study it more effectively.
-Finally, you will systematically break various parts of the model in order to observe what can go wrong when
-implementing multi-threaded Java programs that use semaphores.
+  Modern operating systems normally have a kernel that runs a scheduler.  The goal of the scheduler is to pick which
+  process will next run on the central processing unit (CPU).  There are a wide variety of scheduling algorithms, such
+  as first-come first-served (FCSF), shortest job first (SJF), round-robin (RR), and priority scheduling.  Since these
+  algorithms are normally very complex and often difficult to study in an analytical fashion, operating systems
+  designers may use simulators to better understand their trade-offs in efficiency and fairness. In this laboratory
+  assignment, you will use a scheduling simulator, implemented by Jim Weller, to evaluate several scheduling algorithms.
 
-\section*{Accessing the Producer-Consumer Model}
+\section*{Using Simulation to Evaluate Schedulers}
 
-As in the previous assignment, you should change into directory for the Git repository that I use to share files with
-you. Now, you can type the command {\tt git pull} to retrieve all of the files for this laboratory assignment. If this
-step did not work correctly, then please see the instructor.  Finally, you should use your terminal window to browse
-the files that are in this Git repository.  In particular, please look in the {\tt labs/lab4/src/} directory and use Vim
-to study the Java programs that you find. What files are used to implement the producer-consumer model?
-
-\section*{Understanding and Extending the Producer-Consumer Model}
-
-In this laboratory session, we will use code segments from Vijay K.\ Garg's book, {\em Concurrent and Distributed
-  Computing in Java}, to learn more about how to implement a producer-consumer model with semaphores.  Before you start
-to modify the programs that you received through the Git repository, take some time to learn more about the history of
-the term semaphore.  What is the meaning of this term when it is used in a context not connected to the discipline of
-computer science? What was the first paper to propose the use of semaphores in computer science? Finally, it is
-important to note that this program uses both binary and counting semaphores. What are the similarities and differences
-between these two types of semaphores?
-
-After you have carefully studied the source code of the producer-consumer model, you can compile and execute it.  What
-type of output does this program produce?  Will this program halt?  If yes, then how long will it take to halt?  If no,
-then why does it not halt? How is this program similar to and different from the producer-consumer model that you used
-in the last assignment?
-
-\begin{sloppypar} 
-  As you will see from studying the source code, the current implementation of the {\tt
-    ProducerConsumer} always produces debugging output. Leveraging the JCommander system that you learned how to use in
-  a previous laboratory assignment, you should now implement a command-line interface for the {\tt ProducerConsumer}.
-  First, you should add a parameter that can indicate whether or not the {\tt ProducerConsumer} should produce debugging
-  output.  To implement debugging output correctly, you will need to find each of the classes that execute
-  output-producing statements.  Next, you should notice that the current implementation of the {\tt ProducerConsumer}
-  only creates a single producer and consumer.  To extend the program, you should add a command-line argument that
-  allows the user to specify the number of consumers.  
-\end{sloppypar}
-
-Finally, you should notice that the {\tt ProducerConsumer} does not does not furnish any information about the specific
-thread that is producing the debugging output.  As such, you should further extend the debugging output so that the name
-of the thread is also displayed. To add this feature, you may need to change the inheritance hierarchy for the {\tt
-  Producer} and {\tt Consumer} classes.  You will also need to determine which methods provided by {\tt
-  java.lang.Thread} return information about the name of the thread that is currently executing.
-
-\section*{Understanding Defects in Multi-Threaded Programs}
-
-After you have finished writing the source code to support the command-line arguments for the {\tt ProducerConsumer},
-you can take steps to explore what happens if you make mistakes when implementing multi-threaded Java programs that use
-semaphores.  Please ensure that you carefully make the following changes, recompile the program, execute the program,
-record the incorrect program output, and comment on why the output is evident.  Once you are done making the required
-defective implementations of the program, please return the modified code to the correct state!
-
-\begin{enumerate} 
- 
-  \item Comment out the first two calls to {\tt P} in both the {\tt deposit} and {\tt fetch} methods.  For example, in
-    the {\tt deposit} method you would produce the following new source code statements.  What output does the program
-    produce?  Why does it produce this output?  
-
-    \vspace*{-.1in}
-    \begin{verbatim}
-       //isFull.P(); // wait if buffer is full
-       //mutex.P(); // ensures mutual exclusion
-    \end{verbatim} 
-    \vspace*{-.3in}
-
-  \item After returning the source code to the correct state, you should now comment out the calls to {\tt V} inside of
-    the {\tt deposit} method, thus yielding the source code written below. What output does the program now produce? Can
-    you explain why it produces this output? 
-
-    \vspace*{-.1in}
-    \begin{verbatim}
-       //mutex.V(); 
-       //isEmpty.V(); // notify any waiting consumer
-    \end{verbatim} 
-    \vspace*{-.3in}
-
-\end{enumerate}
-
-\section*{Reflecting on the Producer-Consumer Models}
-
-Now that you have extended your producer-consumer model and taken steps to better understand the types of defects that
-are evident in multi-threaded code that uses semaphores, you can start to further study the behavior of the model.  Try
-to construct two, four, and six {\tt Consumer}s instead of using a single {\tt Consumer}. Now, execute the program again
-and let it run for a longer period of time, making sure to record a portion of the output. Can you find any pattern in
-the output in terms of which {\tt Consumer} thread the operating system kernel schedules?  As in the previous laboratory
-assignment, you should consider the use of operating system tools that you can use to better understand the behavior of
-the multi-threaded producer-consumer model.
-
-Take some time to compare and contrast the two producer-consumer models that you have implemented in these two
-laboratory assignments. After studying the source code of both implementations, you should think about the similarities
-and differences that they exhibit.  Which one do you think is easier to implement, test, and maintain? Which one is more
-likely to lead to a defective implementation? How did you arrive at these conclusions?
+  To learn more about the simulator that we will use to study the scheduling algorithms, please visit the following Web
+  site: \url{http://jimweller.com/jim-weller/jim/java_proc_sched/}.
 
 \section*{Summary of the Required Deliverables}
 
