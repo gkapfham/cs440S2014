@@ -6,7 +6,7 @@
 \usepackage[compact]{titlesec}
 
 \begin{document} \MYTITLE{Laboratory Assignment Five: Using Simulation to Evaluate Scheduling Algorithms} 
-\MYHEADERS{Laboratory Assignment Five}{Due: March 3, 2014}
+\MYHEADERS{Laboratory Assignment Five}{Due: March 10, 2014}
 
 % \vspace*{-.32in}
 
@@ -15,7 +15,7 @@
   Modern operating systems normally have a kernel that runs a scheduler.  The goal of the scheduler is to pick which
   process will next run on the central processing unit (CPU).  There are a wide variety of scheduling algorithms, such
   as first-come first-served (FCSF), shortest job first (SJF), round-robin (RR), and priority scheduling.  Since the
-  behavior of these algorithms is \mbox{workload-driven} and they are often difficult to study in an analytically,
+  behavior of these algorithms is \mbox{workload-driven} and they are often difficult to study an analytically,
   operating systems designers may use simulators to better understand their trade-offs in efficiency and fairness. In
   this laboratory assignment, you will use a scheduling simulator, implemented by Jim Weller, to evaluate several
   scheduling algorithms.
@@ -33,17 +33,17 @@
   The file called {\tt jobList.dat} contains three lines that specify the details about the execution characteristics of
   a process to be scheduled by the operating system.  For instance, the first line in the file contains three numbers,
   ``10 5 1'', with the first value corresponding to the amount of CPU time required by the process and the second and
-  third numbers denoting the time that separates the arrival time and priority of the process, respectively. If you
+  third numbers denoting the time that separates the arrival and the priority of the process, respectively. If you
   carefully study {\tt jobList.dat} you will notice that the first simulation will only run a total of three processes.
 
   To run the simulator, you should type {\tt java -jar cpu.jar} in the terminal window.  What do you now see on your
   screen? To run a simulation, you must first load the {\tt jobList.dat} file.  Then, you should pick a scheduling
   algorithm, indicate the speed at which the algorithm should be animated, and check whether or not the algorithm should
-  consider process priority. Now, you can click the check box to run the algorithm. (Please note that the ``check box''
-  is really a toggle button that does not render correctly on Ubuntu. If you click this button and the simulator does
-  not run as anticipated, then click it again and see if this starts the animation.)
+  consider prioritization and preemption. Now, you can click the check box to run the algorithm. (Please note that the
+  ``check box'' is really a toggle button that does not render correctly on Ubuntu. If you click this button and the
+  simulator does not run as anticipated, then click it again and see if this starts the animation.)
 
-  Once you have finished a run of the simulator, you will observe that the it reports a wide variety of evaluation
+  Once you have finished a run of the simulator, you will observe that it reports a wide variety of evaluation
   metrics. During this laboratory assignment, we will primarily focus on the mean values for response, turnaround, and
   wait time. Ideally, a scheduler will run a workload of jobs in a manner that yields low values for all of these
   metrics. Of course, it is also important to find a scheduler that executes processes in a manner that leads to
