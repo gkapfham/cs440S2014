@@ -18,13 +18,13 @@ more about the characteristics of the file system used by the Linux operating sy
 
 \section*{File System Traversal}
 
-For this laboratory assignment you should implement a file system traversal tool in the Java programming language (students who
-want to use a different programming language should first see the instructor before starting their implementation). Your program
-should use the JCommander command-line argument parsing tool, available for download from \url{http://jcommander.org/}, to accept
-as input all of the appropriate arguments. The tool should start at the directory specified by the user and then recursively
-traverse the file system until it either visits all of files and directories or it visits up to a chosen maximum number of files
-and directories. Students should consider using the methods provides by the {\tt java.io.File} class to perform \mbox{the
-  traversal}.
+For this laboratory assignment you should implement a file system traversal tool in the Java programming language
+(students who want to use a different programming language should first see the instructor before starting their
+implementation). Your program should use the JCommander command-line argument parsing tool, available for download from
+\url{http://jcommander.org/}, to accept as input all of the appropriate arguments. The tool should start at the
+directory specified by the user and then recursively traverse the file system until it either visits all of the files
+and directories or it visits up to a chosen maximum number of files and directories. Students should consider using the
+methods provides by the {\tt java.io.File} class to perform \mbox{the traversal}.
 
 Your file system traversal program should have features to calculate the minimum, maximum, and average size of the files that are
 accessible by recursive traversal from the specified root directory. The program should also be able to report the total number of
