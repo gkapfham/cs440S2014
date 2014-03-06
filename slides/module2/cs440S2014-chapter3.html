@@ -155,11 +155,13 @@
 
 <div>Page Replacement</div>
 
-<div>Page <em class="sky">fault</em> requires <em class="sky">eviction</em></div>
+<div><img src="../images/tennisfault.jpg"/></div>
+
+<div>Page <em class="sky">fault</em> requires <em class="green">eviction</em></div>
 
 <div>Why?</div>
 
-<div>Which page for eviction?</div>
+<div>Which page for <em class="green">eviction</em>?</div>
 
 <div>Page replacement algorithms</div> 
 
@@ -171,17 +173,17 @@
 
 <div>Determining "use" is hard!</div>
 
-<div>R - referenced</div>
+<div><em>R</em> - referenced</div>
 
-<div>M - modified</div>
+<div><em class="sky">M</em> - modified</div>
 
-<div>Contained in the page table</div>
+<div>Contained in the <em class="green">page</em> table</div>
 
-<div>Updated on every memory reference</div>
+<div>Updated on <em class="scarlet">every</em> memory reference</div>
 
-<div>Set by the hardware</div>
+<div>Set by the <em class="plum">hardware</em></div>
 
-<div>R cleared on clock interrupt</div>
+<div>R <em>cleared</em> on clock interrupt</div>
 
 <div>If we have a page fault ...</div>
 
@@ -195,10 +197,15 @@
 
 <div>Class 3: R=1, M=1</div>
 
-<div>NRU: Not recently used</div>
+<div><em class="scarlet">NRU</em>: Not recently used</div>
 
 <div>NRU removes a page, at random, from the lowest class</div>
 
+<div>FIFO</div>
+
+<div>Linked list of all pages</div>
+
+<div>If we have a page fault ...</div>
 
 </body>
 </html>
