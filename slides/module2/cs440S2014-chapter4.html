@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html><head>
+<title>Computer Science 440 Spring 2014</title>
+<meta charset='utf-8'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<link href='../css/big.css' rel='stylesheet'type='text/css'/>
+<script src='../css/big.js'></script>
+</head><body>
+
+<div><em>Computer Science 440</em> <em class="green">Spring</em> 2014</div>
+
+<div>Gregory M. Kapfhammer</div>
+
+<div><em class="orange">Keep in touch!</em><p>Office Hours, Email, Web, Twitter</div>
+
+<DIV>Operating Systems</DIV>
+
+<div>Memory Hierarchy</div>
+
+<div>RAM</div>
+
+<div>ROM</div>
+
+<div>BIOS</div>
+
+<div>Memory Management Unit</div>
+
+<div>How do we ... </div>
+
+<div><em>Organize</em></div>
+
+<div>and <em class="green">Access</em></div>
+
+<div>Memory?</div>
+
+<div>No Memory Abstraction</div>
+
+<div><img src="../images/allaccess.jpg"/></div>
+
+<div>All Access!</div>
+
+<div>Multiple Programs?</div>
+
+<div>Well ...</div>
+
+<div>Yes and No</div>
+
+<div>Swap All</div>
+
+<div>Other Methods</div>
+
+<div>But, Complications</div>
+
+<div>Solution?</div>
+
+<div><em class="plum">Address Space</em></div>
+
+<div><em class="scarlet">Base</em> and <em class="sky">Limit</em> Registers</div>
+
+<div>Page 183</div>
+
+<div>Not <em>Enough</em> Memory?</div>
+
+<div>Swapping</div>
+
+<div>Holes?</div>
+
+<div><img src="../images/garbagetruck.jpg"/></div>
+
+<div>Memory Compaction</div>
+
+<div>Growth Management</div>
+
+<div>Free Memory</div>
+
+<div>Bitmaps</div>
+
+<div>0 = <em>Free</em></div>
+
+<div>1 = <em class="green">Allocated</em></div>
+
+<div>Linked List</div>
+
+<div><em class="green">Allocate</em> Memory</div>
+
+<div><em>First</em> Fit</div>
+
+<div><em class="scarlet">Next</em> Fit</div>
+
+<div><em class="sky">Best</em> Fit</div>
+
+<div><em class="plum">Worst</em> Fit</div>
+
+<div><em class="green">Quick</em> Fit</div>
+
+<div>Which is best?</div>
+
+<div>How to determine?</div>
+
+<div>Simulation</div>
+
+<div>Virtual Memory</div>
+
+<div>Challenge?</div>
+
+<div><em>Large</em> Programs</div>
+
+<div><em class="scarlet">Many</em> Programs</div>
+
+<div><em class="green">Small</em> Physical Memory</div>
+
+<div><img src="../images/pages.jpg"/></div>
+
+<div>Pages</div>
+
+<div><em>Continuous</em> range of addresses</div>
+
+<div>Not <em class="green">all</em> in physical memory</div>
+
+<div>Paging</div>
+
+<div><em>Virtual</em> Addresses > <em class="sky">Physical</em> Addresses</div>
+
+<div>MMU</div>
+
+<div>Page Fault</div>
+
+<div>Page Table</div>
+
+<div><em class="sky">Input</em>: Virtual Page</div>
+
+<div><em class="sky">Output</em>: Physical Page</div>
+
+<div>Paging Challenges</div>
+
+<div>Virtual to physical must be <em>fast</em></div>
+
+<div><em class="plum">Large</em> virtual address space implies <em class="plum">large</em> page table</div>
+
+<div><em>Locality</em> to the rescue!</div>
+
+<div><em class="green">Few</em> page table entries are <em class="green">heavily</em> read</div>
+
+<div>Keep those pages <em>most</em> needed</div>
+
+<div>TLB</div>
+
+<div>Dedicated hardware</div>
+
+<div>Multiple levels of abstraction</div>
+
+<div>"All problems in computer science can be solved by another level of indirection"</div>
+
+<div>David Wheeler</div>
+
+<div>Page Replacement</div>
+
+<div><img src="../images/tennisfault.jpg"/></div>
+
+<div>Page <em class="sky">fault</em> requires <em class="green">eviction</em></div>
+
+<div>Why?</div>
+
+<div>Which page for <em class="green">eviction</em>?</div>
+
+<div>Page replacement algorithms</div> 
+
+<div><em class="plum">Optimal</em></div>
+
+<div>Label each page with the <em>number</em> of instructions executed before <em class="sky">first</em> reference</div>
+
+<div>Not realistic!</div>
+
+<div>Realistic but effective?</div>
+
+<div>Determining "use" is hard!</div>
+
+<div><em>R</em> - referenced</div>
+
+<div><em class="sky">M</em> - modified</div>
+
+<div>Contained in the <em class="green">page</em> table</div>
+
+<div>Updated on <em class="scarlet">every</em> memory reference</div>
+
+<div>Set by the <em class="plum">hardware</em></div>
+
+<div>R <em>cleared</em> on clock interrupt</div>
+
+<div>If we have a page fault ...</div>
+
+<div>Four categories</div>
+
+<div>Class 0: R=0, M=0</div>
+
+<div>Class 1: R=0, M=1</div>
+
+<div>Class 2: R=1, M=0</div>
+
+<div>Class 3: R=1, M=1</div>
+
+<div><em class="scarlet">NRU</em>: Not recently used</div>
+
+<div>NRU removes a page, at random, from the lowest class</div>
+
+<div>FIFO</div>
+
+<div>Linked list of all pages</div>
+
+<div>If we have a page fault ...</div>
+
+<div>Remove the page at the head</div>
+
+<div>Drawbacks?</div>
+
+<div>Don't remove pages that are recently referenced!</div>
+
+<div><em>Second</em> Chance</div>
+
+<div>R=1 means <em>reset</em> and <em class="green">end</em> of queue</div>
+
+<div>But ...</div>
+
+<div>Pages are always moved around the list</div>
+
+<div><img src="../images/clock.jpg"/></div>
+
+<div>Clock</div>
+
+<div>Page 206</div>
+
+<div>R=0 : Evict</div>
+
+<div>R=1 : Reset R and advance</div>
+
+<div>Another alternative?</div>
+
+<div>LRU</div>
+
+<div>Linked list of <em class="green">all</em> pages in memory</div>
+
+<div>Update the list on <em>every</em> memory access!</div>
+
+<div>Expensive</div>
+
+<div>Dedicated hardware</div>
+
+<div>Working Set</div>
+
+<div>Denning</div>
+
+<div>Page 210</div>
+
+<div>Working Set + Clock = ?</div>
+
+<div>WSClock</div>
+
+<div>Count off by fours</div>
+
+<div><em>MMU</em> and the <em class="green">OS</em></div>
+
+<div>Separate <em class="plum">policy</em> and <em class="sky">mechanism</em></div>
+
+</body>
+</html>
+
