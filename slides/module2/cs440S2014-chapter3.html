@@ -155,17 +155,111 @@
 
 <div>Page Replacement</div>
 
-<div>Page <em class="sky">fault</em> requires <em class="sky">eviction</em></div>
+<div><img src="../images/tennisfault.jpg"/></div>
+
+<div>Page <em class="sky">fault</em> requires <em class="green">eviction</em></div>
 
 <div>Why?</div>
 
-<div>Which page for eviction?</div>
+<div>Which page for <em class="green">eviction</em>?</div>
+
+<div>Page replacement algorithms</div> 
 
 <div><em class="plum">Optimal</em></div>
+
+<div>Label each page with the <em>number</em> of instructions executed before <em class="sky">first</em> reference</div>
 
 <div>Not realistic!</div>
 
 <div>Realistic but effective?</div>
+
+<div>Determining "use" is hard!</div>
+
+<div><em>R</em> - referenced</div>
+
+<div><em class="sky">M</em> - modified</div>
+
+<div>Contained in the <em class="green">page</em> table</div>
+
+<div>Updated on <em class="scarlet">every</em> memory reference</div>
+
+<div>Set by the <em class="plum">hardware</em></div>
+
+<div>R <em>cleared</em> on clock interrupt</div>
+
+<div>If we have a page fault ...</div>
+
+<div>Four categories</div>
+
+<div>Class 0: R=0, M=0</div>
+
+<div>Class 1: R=0, M=1</div>
+
+<div>Class 2: R=1, M=0</div>
+
+<div>Class 3: R=1, M=1</div>
+
+<div><em class="scarlet">NRU</em>: Not recently used</div>
+
+<div>NRU removes a page, at random, from the lowest class</div>
+
+<div>FIFO</div>
+
+<div>Linked list of all pages</div>
+
+<div>If we have a page fault ...</div>
+
+<div>Remove the page at the head</div>
+
+<div>Drawbacks?</div>
+
+<div>Don't remove pages that are recently referenced!</div>
+
+<div><em>Second</em> Chance</div>
+
+<div>R=1 means <em>reset</em> and <em class="green">end</em> of queue</div>
+
+<div>But ...</div>
+
+<div>Pages are always moved around the list</div>
+
+<div><img src="../images/clock.jpg"/></div>
+
+<div>Clock</div>
+
+<div>Page 206</div>
+
+<div>R=0 : Evict</div>
+
+<div>R=1 : Reset R and advance</div>
+
+<div>Another alternative?</div>
+
+<div>LRU</div>
+
+<div>Linked list of <em class="green">all</em> pages in memory</div>
+
+<div>Update the list on <em>every</em> memory access!</div>
+
+<div>Expensive</div>
+
+<div>Dedicated hardware</div>
+
+<div>Working Set</div>
+
+<div>Denning</div>
+
+<div>Page 210</div>
+
+<div>Working Set + Clock = ?</div>
+
+<div>WSClock</div>
+
+<div>Count off by fours</div>
+
+<div><em>MMU</em> and the <em class="green">OS</em></div>
+
+<div>Separate <em class="plum">policy</em> and <em class="sky">mechanism</em></div>
 
 </body>
 </html>
