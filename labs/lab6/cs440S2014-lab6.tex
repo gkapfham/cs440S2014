@@ -36,11 +36,22 @@
   about how to calculate the size of a Java primitive, read the article called ``Sizeof for java: object sizing
   revisited'' by Vladimir Roubtsov. In the downloads section of this online article, you will find a Zip file called
   {\tt 02-qa-1226-sizeof.zip}. 
-  
+
   After downloading this file, decompress it in the directory that you are using to store the files for this laboratory
   assignment. Using the example source code provide with this archive, you should write a Java program called {\tt
-  UseSizeOf.java} that calculates the size, in both bits and bytes, of the following variable types:  {\tt
-  short}, {\tt int}, {\tt long}, {\tt float}, {\tt double}, {\tt boolean}, and {\tt char}.
+  UseSizeOf.java} that calculates the size, in both bits and bytes, of the following variable types:  {\tt short}, {\tt
+  int}, {\tt long}, {\tt float}, {\tt double}, {\tt boolean}, and {\tt char}. Don't forget that {\tt UseSizeof.java}
+  will not compile and the program will not run unless you have {\tt objectprofiler.jar} in your {\tt CLASSPATH}
+  environment variable. 
+  
+  When you analyze the output of the {\tt UseSizeof} program, you should take into account that Java's autoboxing
+  feature will transform your primitive types into objects.  As such, your final output needs to consider the size of a
+  reference pointer. What are the final sizes reported by your program? Do they make sense? Why? How do they compare to
+  the sizes of the C variables?
+
+\section*{Analysis of the Sizing Results}
+
+  
 
 \section*{Summary of the Required Deliverables}
 
