@@ -12,14 +12,21 @@
 
 \section*{Introduction}
 
-Main memory, in the form of random-access memory (RAM), is an important component of a computer.  The memory management
-unit (MMU) of an operating system is responsible for allocating, deallocating, and compressing the memory required by
-the programs that the operating system is managing. One of the first steps towards understanding the management of
-memory is to learn more about the size of the primitive variables that programs ask the MMU to allocate to memory. In
-this laboratory assignment, you will write a C and a Java program to determine the size of the most prevalently used
-primitive types supported by these two languages. 
+  Main memory, in the form of random-access memory (RAM), is an important component of a computer.  The memory management
+  unit (MMU) of an operating system is responsible for allocating, deallocating, and compressing the memory required by
+  the programs that the operating system is managing. One of the first steps towards understanding the management of
+  memory is to learn more about the size of the primitive variables that programs ask the MMU to allocate to memory. In
+  this laboratory assignment, you will write a C and a Java program to determine the size of the most prevalently used
+  primitive types supported by these two languages. 
 
 \section*{Sizing Variables in a C Program}
+
+  The C programming language provides a {\tt sizeof} method that a program can use to determine the size of a primitive
+  variable like an {\tt int}. What are the inputs and outputs of the {\tt sizeof} function? How does the {\tt sizeof}
+  function work? You should write a {\tt usesizeof.c} program and use the {\tt gcc} compiler to build a binary called
+  {\tt usesizeof}. Your program should calculate the size, in both bits and bytes, of the following variable types: {\tt
+  short}, {\tt int}, {\tt long}, {\tt long long}, {\tt float}, {\tt double}, {\tt long double}, {\tt char}, {\tt char*},
+  and {\tt \_Bool}. Do the sizes reported by your program make sense? Why?
 
 \section*{Sizing Variables in a Java Program}
 
