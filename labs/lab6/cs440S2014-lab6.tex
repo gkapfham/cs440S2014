@@ -44,7 +44,7 @@
   will not compile and the program will not run unless you have {\tt objectprofiler.jar} in your {\tt CLASSPATH}
   environment variable. 
   
-  When you analyze the output of the {\tt UseSizeof} program, you should take into account that Java's autoboxing
+  When you analyze the output of the {\tt UseSizeOf} program, you should take into account that Java's autoboxing
   feature will transform your primitive types into objects.  As such, your final output needs to consider the size of a
   reference pointer. What are the final sizes reported by your program? Do they make sense? Why? How do they compare to
   the sizes of the C variables?
@@ -54,7 +54,9 @@
   This laboratory assignment focuses on computing the size of primitive variables. How would the results vary if we
   considered the sizing of pointers, dynamically allocated variables, and heap-resident objects? What do the results
   from running your programs suggest about the trade-offs in the management of memory pages in the entire memory address
-  space?
+  space? To complete this assignment, you should write a short report that explains the programs that you write and
+  gives the full output from each program.  Next, you should compare and contrast the results from the C and Java
+  programs. Finally, you should make sure that you respond to all of the questions posed in the assignment.
 
 \section*{Summary of the Required Deliverables}
 
@@ -62,13 +64,15 @@ This assignment invites you to submit printed and signed versions of the followi
 
 \begin{enumerate}
 
-  \itemsep0in
+  \item The source code of the {\tt usesizeof.c} and {\tt UseSizeOf.java} programs
 
-  \item A screenshot demonstrating that you were able to correctly configure and use the simulator
+  \item The command lines that you used to compile and run the C and Java programs
 
-  \item All of the {\tt .dat} files used in the simulation studies that you conducted your experiments
+  \item A comprehensive report that explains the results and responds to all stated questions 
 
-  \item A comprehensive report on all of the runs of the scheduling simulator that includes:
+  \item Suggestions for new features to add to the variable sizing programs
+
+  \item Suggestions for future experiments and analyses that use the variable sizing programs
 
   \item A reflective discussion of the challenges that you encountered when completing this assignment
 
