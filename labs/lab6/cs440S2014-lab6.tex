@@ -30,6 +30,18 @@
 
 \section*{Sizing Variables in a Java Program}
 
+  While the Java language specification states that all primitive types should be uniform across implementations of the
+  compiler and virtual machine, it is still worthwhile to determine the size of primitives in this language. However,
+  the Java language does not provide a {\tt sizeof} method like the one that you used in your C program. To learn more
+  about how to calculate the size of a Java primitive, read the article called ``Sizeof for java: object sizing
+  revisited'' by Vladimir Roubtsov. In the downloads section of this online article, you will find a Zip file called
+  {\tt 02-qa-1226-sizeof.zip}. 
+  
+  After downloading this file, decompress it in the directory that you are using to store the files for this laboratory
+  assignment. Using the example source code provide with this archive, you should write a Java program called {\tt
+  UseSizeOf.java} that calculates the size, in both bits and bytes, of the following variable types:  {\tt
+  short}, {\tt int}, {\tt long}, {\tt float}, {\tt double}, {\tt boolean}, and {\tt char}.
+
 \section*{Summary of the Required Deliverables}
 
 This assignment invites you to submit printed and signed versions of the following deliverables: 
