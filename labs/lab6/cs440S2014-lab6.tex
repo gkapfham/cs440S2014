@@ -46,12 +46,18 @@
   
   When you analyze the output of the {\tt UseSizeOf} program, you should take into account that Java's autoboxing
   feature will transform your primitive types into objects.  As such, your final output needs to consider the size of a
-  reference pointer. What are the sizes reported by your program? Do they make sense? Why? How do they compare to
+  managed object pointer. What are the sizes reported by your program? Do they make sense? Why? How do they compare to
   the sizes of the C variables?
+
+\section*{Extending the Sizing Programs}
+
+  So far, the programs that you wrote for this laboratory assignment focused on computing the size of primitive
+  variables.  You should add at least one advanced feature to both your C and Java sizing programs.  For your C program,
+  you could add code that can run {\tt sizeof} on a {\tt union} or a {\tt struct}.
 
 \section*{Analysis of the Sizing Results}
 
-  This laboratory assignment focuses on computing the size of primitive variables. How would the results vary if we
+  How would the results vary if we
   considered the sizing of pointers, dynamically allocated variables, and heap-resident objects? What do the results
   from running your programs suggest about the trade-offs in the management of memory pages in the entire memory address
   space? To complete this assignment, you should write a short report that explains the programs that you write and
