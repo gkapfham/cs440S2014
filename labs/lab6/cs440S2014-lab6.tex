@@ -53,16 +53,22 @@
 
   So far, the programs that you wrote for this laboratory assignment focused on computing the size of primitive
   variables.  You should add at least one advanced feature to both your C and Java sizing programs.  For your C program,
-  you could add code that can run {\tt sizeof} on a {\tt union} or a {\tt struct}.
+  you could add code that can run {\tt sizeof} on a {\tt union}, {\tt struct}, or a pointer. For your Java program, you
+  could add code that sizes a complex Java object like a linked list. What do these results tell you about the size of
+  non-primitive data types?
 
 \section*{Analysis of the Sizing Results}
 
-  How would the results vary if we
-  considered the sizing of pointers, dynamically allocated variables, and heap-resident objects? What do the results
-  from running your programs suggest about the trade-offs in the management of memory pages in the entire memory address
-  space? To complete this assignment, you should write a short report that explains the programs that you write and
+  Now that you have finished implementing an extended version of the sizing programs for the C and Java languages, you
+  can reflect on the implications of their output. What do the results from running your programs suggest about the
+  trade-offs in the management of memory pages in the entire memory address space? What are the differences associated
+  with the management of primitives and pointers, dynamically allocated variables, or heap-resident objects? 
+  
+  To complete this laboratory assignment, you should write a report that explains the programs that you implemented and
   gives the full output from each program.  Next, you should compare and contrast the results from the C and Java
-  programs. Finally, you should make sure that you respond to all of the questions posed in the assignment.
+  programs.  Finally, you should make sure that you respond to all of the questions posed in the assignment. Please make
+  sure that your report addresses how your results would influence the design of an operating system's memory
+  management unit. 
 
 \section*{Summary of the Required Deliverables}
 
