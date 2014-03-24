@@ -12,21 +12,21 @@
 
 \section*{Introduction}
 
-  Main memory, in the form of random-access memory (RAM), is an important component of a computer.  The memory management
-  unit (MMU) of an operating system is responsible for allocating, deallocating, and compressing the memory required by
-  the programs that the operating system is managing. One of the first steps towards understanding the management of
-  memory is to learn more about the size of the primitive variables that programs ask the MMU to allocate to memory. In
-  this laboratory assignment, you will write a C and a Java program to determine the size of the most prevalently used
-  primitive types supported by these two languages. 
+  Main memory, in the form of random access memory (RAM), is an important component of a modern computer.  The memory
+  management unit (MMU) of an operating system is responsible for allocating, deallocating, and compressing the memory
+  required by the programs that the operating system is managing. One of the first steps towards understanding the
+  management of memory is to learn more about the size of the primitive variables that programs ask the MMU to allocate
+  to memory. In this laboratory assignment, you will implement both a C and a Java program to determine the size of the
+  most prevalently used primitive types supported by these two languages. 
 
 \section*{Sizing Primitive Variables in C Language Programs}
 
-  The C programming language provides a {\tt sizeof} function that a program can use to determine the size of a primitive
-  variable like an {\tt int}. What are the inputs and outputs of the {\tt sizeof} function? How does the {\tt sizeof}
-  function work? You should write a {\tt usesizeof.c} program and use the {\tt gcc} compiler to build a binary called
-  {\tt usesizeof}. Your program must calculate the size, in both bits and bytes, of the following variable types: {\tt
-  short}, {\tt int}, {\tt long}, {\tt long long}, {\tt float}, {\tt double}, {\tt long double}, {\tt char}, {\tt char*},
-  and {\tt \_Bool}. Do the sizes reported by your program make sense? Why?
+  The C programming language provides a {\tt sizeof} function that a program can use to determine the size of a
+  primitive variable like an {\tt int}. What are the inputs and outputs of the {\tt sizeof} function? How does the {\tt
+  sizeof} function work? You should write a {\tt usesizeof.c} program and run the {\tt gcc} compiler to build a binary
+  called {\tt usesizeof}. Your program must calculate the size, in both bits and bytes, of the following variable types:
+  {\tt short}, {\tt int}, {\tt long}, {\tt long long}, {\tt float}, {\tt double}, {\tt long double}, {\tt char}, {\tt
+  char*}, and {\tt \_Bool}. Do the sizes reported by your program make sense? Why?
 
 \section*{Sizing Primitive Variables in Java Language Programs}
 
@@ -53,16 +53,16 @@
 
   So far, the programs that you wrote for this laboratory assignment focused on computing the size of primitive
   variables.  You should add at least one advanced feature to both your C and Java sizing programs.  For your C program,
-  you could add code that can run {\tt sizeof} on a {\tt union}, {\tt struct}, or a pointer. For your Java program, you
-  could add code that sizes a complex Java object like a linked list. What do these results tell you about the size of
-  non-primitive data types?
+  you could add code that can run {\tt sizeof} on a {\tt union}, {\tt struct}, or another type of pointer. For your Java
+  program, you could add code that sizes a complex Java object like a linked list. What do these results tell you about
+  the size of non-primitive data types?
 
 \section*{Analysis of the Sizing Results}
 
   Now that you have finished implementing an extended version of the sizing programs for the C and Java languages, you
   can reflect on the implications of their output. What do the results from running your programs suggest about the
   trade-offs in the management of memory pages in the entire memory address space? What are the differences associated
-  with the management of primitives and pointers, dynamically allocated variables, or heap-resident objects? 
+  with the management of primitive variables and pointers, dynamically allocated variables, or heap-resident objects? 
   
   To complete this laboratory assignment, you should write a report that explains the programs that you implemented and
   gives the full output from each program.  Next, you should compare and contrast the results from the C and Java
@@ -80,7 +80,7 @@ This assignment invites you to submit printed and signed versions of the followi
 
   \item The command lines that you used to compile and run the C and Java programs
 
-  \item A comprehensive report that explains the results and responds to all stated questions 
+  \item A comprehensive report that explains the results and responds to all of the stated questions 
 
   \item Suggestions for additional features to add to the variable sizing programs
 
