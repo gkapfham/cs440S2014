@@ -5,7 +5,7 @@
 
 \usepackage[compact]{titlesec}
 
-\begin{document} \MYTITLE{Laboratory Assignment Six: Measuring the Size of Program Variables in Java and C}
+\begin{document} \MYTITLE{Laboratory Assignment Six: Measuring the Size of Program Variables in C and Java}
 \MYHEADERS{Laboratory Assignment Six}{Due: March 31, 2014}
 
 % \vspace*{-.32in}
@@ -19,34 +19,34 @@
   this laboratory assignment, you will write a C and a Java program to determine the size of the most prevalently used
   primitive types supported by these two languages. 
 
-\section*{Sizing Variables in a C Program}
+\section*{Sizing Primitive Variables in C Language Programs}
 
-  The C programming language provides a {\tt sizeof} method that a program can use to determine the size of a primitive
+  The C programming language provides a {\tt sizeof} function that a program can use to determine the size of a primitive
   variable like an {\tt int}. What are the inputs and outputs of the {\tt sizeof} function? How does the {\tt sizeof}
   function work? You should write a {\tt usesizeof.c} program and use the {\tt gcc} compiler to build a binary called
-  {\tt usesizeof}. Your program should calculate the size, in both bits and bytes, of the following variable types: {\tt
+  {\tt usesizeof}. Your program must calculate the size, in both bits and bytes, of the following variable types: {\tt
   short}, {\tt int}, {\tt long}, {\tt long long}, {\tt float}, {\tt double}, {\tt long double}, {\tt char}, {\tt char*},
   and {\tt \_Bool}. Do the sizes reported by your program make sense? Why?
 
-\section*{Sizing Variables in a Java Program}
+\section*{Sizing Primitive Variables in Java Language Programs}
 
   While the Java language specification states that all primitive types should be uniform across implementations of the
   compiler and virtual machine, it is still worthwhile to determine the size of primitives in this language. However,
   the Java language does not provide a {\tt sizeof} method like the one that you used in your C program. To learn more
-  about how to calculate the size of a Java primitive, read the article called ``Sizeof for java: object sizing
-  revisited'' by Vladimir Roubtsov. In the downloads section of this online article, you will find a Zip file called
+  about how to calculate the size of a Java primitive, read the article called ``Sizeof for Java: Object Sizing
+  Revisited'' by Vladimir Roubtsov. In the downloads section of this online article, you will find a Zip file called
   {\tt 02-qa-1226-sizeof.zip}. 
 
-  After downloading this file, decompress it in the directory that you are using to store the files for this laboratory
-  assignment. Using the example source code provide with this archive, you should write a Java program called {\tt
-  UseSizeOf.java} that calculates the size, in both bits and bytes, of the following variable types:  {\tt short}, {\tt
-  int}, {\tt long}, {\tt float}, {\tt double}, {\tt boolean}, and {\tt char}. Don't forget that {\tt UseSizeof.java}
-  will not compile and the program will not run unless you have {\tt objectprofiler.jar} in your {\tt CLASSPATH}
-  environment variable. 
+  After downloading this file, decompress it in the directory that you are using to store all of the files for this
+  laboratory assignment. Using the example source code provide with this archive, you should write a Java program called
+  {\tt UseSizeOf.java} that calculates the size, in both bits and bytes, of the following variable types:  {\tt short},
+  {\tt int}, {\tt long}, {\tt float}, {\tt double}, {\tt boolean}, and {\tt char}. Don't forget that {\tt
+  UseSizeof.java} will not compile and the program will not run unless you have {\tt objectprofiler.jar} in your {\tt
+  CLASSPATH} environment variable. 
   
   When you analyze the output of the {\tt UseSizeOf} program, you should take into account that Java's autoboxing
   feature will transform your primitive types into objects.  As such, your final output needs to consider the size of a
-  reference pointer. What are the final sizes reported by your program? Do they make sense? Why? How do they compare to
+  reference pointer. What are the sizes reported by your program? Do they make sense? Why? How do they compare to
   the sizes of the C variables?
 
 \section*{Analysis of the Sizing Results}
