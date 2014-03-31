@@ -12,23 +12,23 @@
 
 \section*{Introduction}
 
-Since all computer applications ultimately need to store and retrieve information, it is essential that an operating
+Since most software applications ultimately need to store and retrieve information, it is essential that an operating
 system  provide a file system to support these activities.  It is also important to ensure that application programs
 effectively use the primitives provided by the file system.  In this laboratory assignment, we will explore and
-experimentally evaluate two file system searching tools, {\tt grep} and {\tt ag}. The first tool that we will study,
-{\tt grep}, was implemented years ago by Ken Thompson, one of the implementors of Unix.  The second tool, known as {\tt
-ag} or the ``Silver Searcher'', is a new tool for file system searching. As part of this assignment, you will learn the
-command lines associated with both of these tools and then design a benchmarking framework to determine which one is
+experimentally evaluate two file system searching tools, {\tt grep} and {\tt ag}. One of the tools that we will study,
+{\tt grep}, was first implemented years ago by Ken Thompson, one of the creators of Unix.  The second tool, known as
+{\tt ag} or the ``Silver Searcher'', is a new tool for file system searching. As part of this assignment, you will learn
+the command lines associated with both of these tools and then design a benchmarking framework to determine which one is
 faster.  Finally, you will explore at least one advanced application of these tools.
 
 \section*{File System Searching with {\tt grep}, {\tt ag}, and {\tt nautilus}}
 
 Before you start using these two tools, you should learn about their history. For instance, you should learn exactly
-when the tools were implemented and who initially created them. Next, you should run the {\tt man} command in your
-terminal window and study the output to ensure that you understand the basic command lines that both tools support. What
-are the basic commands for searching a specific directory with these two tools? Finally, you should type {\tt nautilus}
-in your terminal window to run Ubuntu's graphical file system browser.  How does {\tt nautilus} support file
-system searching?  Which tool seems to furnish the most robust set of searching features?
+when the tools were implemented and who initially created them. Next, you can run the {\tt man} command in your terminal
+window and study its output to ensure that you understand the command lines that both tools support. What are the basic
+commands for searching a specific directory with these two tools? Finally, you should type {\tt nautilus} in your
+terminal window to run Ubuntu's graphical file system browser.  How does {\tt nautilus} support file system searching?
+Overall, which tool(s) seem to furnish the most robust set of searching features? Why?
 
 \section*{Experimentally Evaluating File System Searchers}
 
@@ -56,32 +56,48 @@ it is possible to do so, why these results are evident. If you had to pick one o
 and small directories of source code, which one would you select? Why? As you complete a report on the results from your
 empirical study, make sure that you give all of the relevant details that would be needed to support the replication of
 your results. Finally, you should comment on whether or not it would be possible to perform the same type of file
-searching with {\tt nautilus}, Ubuntu's graphical file browser. Please see the instructor if you have questions about
-completing these analysis tasks.
+searching with {\tt nautilus}, Ubuntu's graphical file system browser. Please see the instructor if you have questions
+about completing these analysis tasks.
 
 \section*{Advanced Use of File System Searchers}
 
-File system searching tools like
+File system searching tools like {\tt grep} and {\tt ag} have a wide variety of interesting applications.  For instance,
+the Vim text editor can be extended with CTRL-P, a plugin that supports fuzzy file finding.  You can learn more about
+CTRL-P by visiting the following Web site: \url{http://kien.github.io/ctrlp.vim/}. One critique of CTRL-P is that it is
+only fast enough for regular use when it leverages caching.  However, users will often invalidate the CTRL-P cache when
+they create new files, forcing the cache to be rebuilt with a time consuming additional scan. One resolution to this
+problem is to configure CTRL-P to use an external user command such as {\tt ag}.  As such, an example of an advanced use
+of file system searchers that you could report on is the configuration of Vim to use an enhanced version of CTRL-P that
+leverages {\tt ag}. Alternatively, you could install and explain how to use the {\tt ag.vim} plugin that makes it
+possible to run {\tt ag} searches directly from Vim. Since Vim also provides integration with the {\tt grep} command,
+you could explore this advanced feature as well. Students may also look into advanced features that do not involve the
+use of Vim.
 
 \section*{Summary of the Required Deliverables}
 
 This assignment invites you to submit printed and signed versions of the following deliverables: 
 
+\vspace*{-.05in}
 \begin{enumerate}
 
-  \item 
+  \itemsep0in
 
-  \item The command lines that you used run all of your benchmarks with {\tt grep} and {\tt ag} 
+  \item A description of the history, features, and drawbacks associated with {\tt grep}, {\tt ag}, and {\tt nautilus} 
+
+  \item The command lines that you used to run all of your benchmarks with {\tt grep} and {\tt ag} 
+
+  \item Screenshots demonstrating that you could correctly configure and run {\tt grep}, {\tt ag}, and {\tt nautilus} 
 
   \item A comprehensive report that explains the results and responds to all of the stated questions 
 
-  \item The source code and documentation for an advanced use of the file system searching tools
+  \item The source code and/or documentation for an advanced use of the file system searching tools
 
-  \item Ideas for future experiments and analyses that use the file system searchers 
+  \item Ideas for future experiments and analyses that use and evaluate the file system searchers 
 
   \item A reflective discussion of the challenges that you encountered when completing this assignment
 
 \end{enumerate}
+\vspace*{-.05in}
 
 In adherence to the honor code, students should complete this assignment on an individual basis. While it is appropriate
 for students in this class to have high-level conversations about the assignment, it is necessary to distinguish
