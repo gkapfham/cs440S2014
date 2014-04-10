@@ -202,70 +202,59 @@ responsible for checking the white board for status updates.
 
   \newpage
   
-\item ({\bf 10 Points}) The process is the main ``unit of work'' in an operating system.  Answer the following questions
-  about processes and how they are managed by the operating system.
+\item ({\bf 10 Points}) An operating system normally provides a file system that supports the persistent storage of
+  data.  Answer the following questions about the creation and use of file systems.
 
   \begin{enumerate}
 
-    \item ({\bf 4 Points}) There are four events that can lead to the creation of a process. \mbox{What are they}?
+    \item ({\bf 4 Points}) Operating systems commonly support both sequential-access and random-access files.  What is
+      the meaning of these two terms?  What type of file would a database management system use to store its contents?
+      Why?
 
-    \item ({\bf 4 Points}) A process can be in one of three states: running, blocked, and ready. Using circles to
-      represent each of these states and directed edges to denote transitions between these states, draw a process-state
-      diagram. All states and edges must have labels.
+    \item ({\bf 4 Points}) A file system often supports navigation of directories with both relative and absolute path
+      names.  What is the meaning of these two terms?  Please give an example of each path type and explain what
+      indicates that the path is either relative or absolute.
 
-    \item ({\bf 2 Points}) The operating system maintains a process table that stores information about each process
-      that is currently executing on a computer. Using concrete examples whenever possible, please name and describe at
-      least two of these fields.
+    \item ({\bf 2 Points})  The following line is excerpted from an {\tt /etc/fstab} file.  What is the meaning of these
+      two lines? At minimum, your response to this question should clearly explain the meaning of the terms {\tt
+      /dev/sda1} and {\tt ext4}. \\
+
+      \hspace*{-.75in}
+      \vspace*{1in}
+      \begin{minipage}{4in}
+        \begin{verbatim}
+        # / was on /dev/sda1 during installation
+        UUID=5f006f4b-ff6c-4d12-9e78-a3540f33339e / ext4 errors=remount -ro 0 1
+        \end{verbatim}
+      \end{minipage}
 
   \end{enumerate}
 
   \newpage
 
-  \begin{figure}[t]
+  \begin{figure}[p]
     \centering
-    \includegraphics{fig2-11}
-    \caption{Different Configurations of Processes and Threads.}
-    \label{fig:pandt}
+    \includegraphics{fig412}
+    \vspace*{-6.75in}
+    \caption{A Structure for File Management.}
+    \label{fig:fat}
   \end{figure}
 
-
-\item ({\bf 10 Points}) The operating system must provide primitives for scheduling threads and processes in a manner
-  that avoids concurrency control problems. Answer the following questions about threads, processes, and concurrent
-  execution.
+\item ({\bf 10 Points}) The file system must have an efficient implementation of files and directories that supports
+  rapid creation, deletion, and location of files.  Answer the following questions about file system implementation and
+  the use of disk drives.
 
 \begin{enumerate}
 
-  \item ({\bf 5 Points}) Figure~\ref{fig:pandt} shows two different canonical configurations of processes and threads. Answer the
-    following questions about the trade-offs evident in this diagram.
+  \item ({\bf 5 Points}) Figure~\ref{fig:fat} shows one example of a structure that a file system can use to manage
+    files.  What is the name of this structure? How does a file system use this structure to find files?  What are the
+    drawbacks associated with this approach?
 
-    \begin{enumerate}
+  \item ({\bf 3 Points}) Certain file systems, such as NTFS, provide support for journaling.  What is a
+    journaling file system?  What are the benefits and drawbacks associated with journals?
 
-      \item Describe a scenario in which Figure~\ref{fig:pandt}(a) is:
-
-        \begin{itemize}
-
-          \item A good option for concurrent execution
-          \item A poor option for concurrent execution
-
-        \end{itemize}
-
-      \item Describe a scenario in which Figure~\ref{fig:pandt}(b) is:
-
-        \begin{itemize}
-
-          \item A good option for concurrent execution
-          \item A poor option for concurrent execution
-
-        \end{itemize}
-
-      \item If you were designing an operating system that could only support one of these models, which would you pick?
-        Please justify your response to this question.
-
-    \end{enumerate}
-
-  \item ({\bf 5 Points}) Many kernel-mode and user-mode programs contain critical region(s) representing code
-    segments that must be executed in mutual exclusion.  What is mutual exclusion? What are the four conditions that
-    must be supported by any technique that aims to enforce mutual exclusion for a program's critical region?
+  \item ({\bf 2 Points}) It is possible to have a file system run on a solid-state drive (SSD).  What is an SSD?  What
+    are the benefits associated with the use of SSDs? 
 
 \end{enumerate}
 
