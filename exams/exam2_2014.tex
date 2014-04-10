@@ -130,27 +130,34 @@ responsible for checking the white board for status updates.
 %   \label{fig:clientserver}
 % \end{figure}
 % 
-\item ({\bf 10 Points}) There are many basic concepts that under gird the fundamentals of operating systems.  Answer the
-  following questions about basic operating systems concepts.
+\item ({\bf 10 Points}) It is important for the memory management unit (MMU) to be able to track the memory that is
+  currently free.  Answer the following questions about managing free memory.
 
   \begin{enumerate}
           
-  \item ({\bf 4 Points}) A real-time operating system must schedule tasks to guarantee that a specified deadline will be
-    met.  Draw a graph with a horizontal axis called ``time'', a vertical axis called ``utility'', and a vertical line
-    at point $D$ on the horizontal axis.  Now, please draw a utility curve that represents the challenge associated with
-    scheduling in a real-time operating system. Why did you draw this curve the way that you did?
+  \item ({\bf 6 Points}) Suppose that the memory manager keeps a linked list of allocated and free segments.  Next,
+    assume that the MMU tracks the following information for each unit of the memory; in this notation $P$
+    denotes ``Process'' and $H$ stands \mbox{for ``Hole''}.
 
-  \item ({\bf 3 Points}) The shell of an operating system allows for the composition of processes using the pipe and
-    filter architecture.  In the following code segment, what is the pipe? What is the filter? Why is this a good mode
-    of interaction with the operating system?
+    \begin{itemize}
+      \item The type marker, $T \in \{P, H\}$
+      \item The start location, $S$
+      \item The length of the unit, $L$
+    \end{itemize}
 
-    \begin{quote}
-      {\tt cat file1 file2 file3 | sort > /dev/lp \&}
-    \end{quote}
+    Using the aforementioned information that is tracked for each allocation unit, please clearly explain how the
+    following memory allocation algorithms would work.
 
-  \item ({\bf 3 Points}) Figure~\ref{fig:clientserver} furnishes an example of client-server communication with the
-    support of the operating system kernel. Please outline all of the steps that must take place to support the
-    communication between ``Machine 1'' and ``Machine 2''. 
+    \begin{enumerate}
+      \item ({\bf 2 Points}) First fit
+      \item ({\bf 2 Points}) Best fit
+      \item ({\bf 2 Points}) Worst fit
+      % \item ({\bf 2 Points}) Quick fit
+    \end{enumerate}
+
+  \item ({\bf 4 Points}) The memory manager should use an efficient algorithm to allocate a program to a free location in
+    memory.  What is the worst-case time complexity of the first fit and best fit algorithms?  Which, if any, of these
+    two algorithms is likely to be faster?
 
   \end{enumerate}
 
