@@ -86,7 +86,7 @@ showstringspaces=false}
 \begin{center}
 
 CMPSC 440: Operating Systems\\
-Examination One\\
+Examination Two\\
 %Saturday December 11, 2004 \\
 
 \end{center}
@@ -105,7 +105,8 @@ responsible for checking the white board for status updates.
 \begin{enumerate}
   
 \item ({\bf 10 Points}) The memory management unit (MMU) of an operating system controls what parts of a program are in
-  memory and how those programs are accessed.  Answer the following questions about the MMU.
+  memory and how those programs are accessed.  Answer the following questions about basic memory management operations
+  and trade-offs.
   
   \begin{enumerate}
           
@@ -116,8 +117,9 @@ responsible for checking the white board for status updates.
     space?  What does it mean if an address space is dynamically relocatable? How could the MMU use base and limit
     registers to support dynamic relocation?   
 
-  \item ({\bf 3 Points}) Many operating systems support both virtual and physical memory.  After clearly defining both
-    of these types of memory, please state which one is faster and explain why this is the case.
+  \item ({\bf 3 Points}) The majority of modern operating systems support both virtual and physical memory.  After
+    clearly defining both of these types of memory, please state which one is faster and explain why this is the case.
+    Why does an OS support both of these?
     
   \end{enumerate}
         
@@ -163,24 +165,13 @@ responsible for checking the white board for status updates.
 
   \newpage
 
-\item ({\bf 10 Points}) Most, if not all, operating systems provide a kernel and many support virtualization. Answer the
-  following questions about kernels and virtualization methods.
+\item ({\bf 10 Points}) An operating system's memory manager often segments the memory into pages.  Answer the following
+  questions about memory pages and page replacement algorithms.
 
   \begin{enumerate}
 
-    \item ({\bf 2 Points}) Most virtualization techniques distinguish between the guest operating system and the host
-      operating system.  What is the meaning of these two terms? 
-
-    \item ({\bf 3 Points}) How does the Java virtual machine support the standard of write-once run-anywhere? Your
-      response to this question should use a properly labeled diagram.
-
-    \item ({\bf 3 Points}) There are three representative types of operating systems kernels: microkernels, exokernels,
-      and monolithic kernels. Using a properly labeled diagram for each definition, explain these types of kernels. What
-      are their strengths and weaknesses?
-
-    \item ({\bf 2 Points}) When implementing the process scheduler for the kernel, it is normally useful to ``separate
-      policy and mechanism''.  What does this maxim mean? \mbox{Why is it important}?
-
+    \item ({\bf 2 Points}) 
+  
   \end{enumerate}
 
   \newpage
