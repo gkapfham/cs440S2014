@@ -174,7 +174,30 @@ responsible for checking the white board for status updates.
 
     \item ({\bf 2 Points}) The optimal page replacement algorithm is the ``gold standard'' by which other page
       replacement algorithms are judged.  How does this algorithm work? 
+
+    \item ({\bf 4 Points}) Page replacement algorithms can use two bits to determine which page should be replaced.
+      These bits, $R$ and $M$, have the following meanings:
+
+      \begin{itemize} 
+        \item $R$: the page was referenced 
+        \item $W$: the page was written
+      \end{itemize}
   
+    The not recently used (NRU) algorithm removes a page at random from the lowest-numbered non-empty class, with the
+    four classes having the following names:
+
+    \begin{itemize}
+      \item Class 0
+      \item Class 1
+      \item Class 2
+      \item Class 3
+    \end{itemize}
+    
+    Using the $R$ and $W$ bits in your response, what is the meaning of these four classes?
+
+    \item ({\bf 1 Points}) One of the aforementioned classes contains an entity known at the VIP.  What is the meaning
+      of this term? What does the NRU algorithm do with these VIPs?
+
   \end{enumerate}
 
   \newpage
