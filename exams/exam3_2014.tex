@@ -103,7 +103,59 @@ responsible for checking the white board for status updates.
 %\mbox{} \newline
 
 \begin{enumerate}
-  
+
+\item ({\bf 10 Points}) The process is the main ``unit of work'' in an operating system.  Answer the following questions
+  about processes and how they are managed by the operating system.
+
+  \begin{enumerate}
+
+    \item ({\bf 4 Points}) There are four events that can lead to the creation of a process. \mbox{What are they}?
+
+    \item ({\bf 4 Points}) A process can be in one of three states: running, blocked, and ready. Using circles to
+      represent each of these states and directed edges to denote transitions between these states, draw a process-state
+      diagram. All states and edges must have labels.
+
+    \item ({\bf 2 Points}) The operating system maintains a process table that stores information about each process
+      that is currently executing on a computer. Using concrete examples whenever possible, please name and describe at
+      least two of these fields.
+
+  \end{enumerate}
+
+  \newpage
+
+\begin{figure}[t]
+  \centering
+  \includegraphics{fig1-27}
+  \caption{Client-Server Communication Involving the Client, a Server, and the Kernel.}
+  \label{fig:clientserver}
+\end{figure}
+
+\item ({\bf 10 Points}) There are many basic concepts that under gird the fundamentals of operating systems.  Answer the
+  following questions about basic operating systems concepts.
+
+  \begin{enumerate}
+          
+  \item ({\bf 4 Points}) A real-time operating system must schedule tasks to guarantee that a specified deadline will be
+    met.  Draw a graph with a horizontal axis called ``time'', a vertical axis called ``utility'', and a vertical line
+    at point $D$ on the horizontal axis.  Now, please draw a utility curve that represents the challenge associated with
+    scheduling in a real-time operating system. Why did you draw this curve the way that you did?
+
+  \item ({\bf 3 Points}) The shell of an operating system allows for the composition of processes using the pipe and
+    filter architecture.  In the following code segment, what is the pipe? What is the filter? Why is this a good mode
+    of interaction with the operating system?
+
+    \begin{quote}
+      {\tt cat file1 file2 file3 | sort > /dev/lp \&}
+    \end{quote}
+
+  \item ({\bf 3 Points}) Figure~\ref{fig:clientserver} furnishes an example of client-server communication with the
+    support of the operating system kernel. Please outline all of the steps that must take place to support the
+    communication between ``Machine 1'' and ``Machine 2''. 
+
+  \end{enumerate}
+
+  \newpage
+
 \item ({\bf 10 Points}) The memory management unit (MMU) of an operating system controls what parts of a program are in
   memory and how those programs parts are accessed.  Answer the following questions about basic memory management
   operations and their trade-offs.
