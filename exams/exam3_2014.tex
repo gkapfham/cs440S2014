@@ -173,18 +173,19 @@ responsible for checking the white board for status updates.
   operations and their trade-offs.
   
   \begin{enumerate}
-          
-  \item ({\bf 2 Points}) Many computers have both RAM and ROM.  What is the meaning of these two terms?  How does a
-    computer operating system use both RAM and ROM?
 
-  \item ({\bf 5 Points}) It is possible to divide up the computer's memory into address spaces.  What is an address
-    space?  What does it mean if an address space is dynamically relocatable? How could the MMU use base and limit
-    registers to support dynamic relocation?   
+    \item ({\bf 3 Points}) Many computers have both RAM and ROM.  What is the meaning of these two terms?  How does a
+      computer operating system use both RAM and ROM? Does the computer store the Basic Input/Output System (BIOS) in
+      the RAM or the ROM?
 
-  \item ({\bf 3 Points}) The majority of modern operating systems support both virtual and physical memory.  After
-    clearly defining both of these types of memory, please state which one is faster and explain why this is the case.
-    Why does an OS support both of these?
-    
+    \item ({\bf 4 Points}) It is possible to divide up the computer's memory into address spaces.  What is an address
+      space?  What does it mean if an address space is dynamically relocatable? How could the MMU use base and limit
+      registers to support dynamic relocation?   
+
+    \item ({\bf 3 Points}) The majority of modern operating systems support both virtual and physical memory.  After
+      clearly defining both of these types of memory, please state which one is faster and explain why this is the case.
+      Why does an OS support both of these?
+
   \end{enumerate}
         
 \newpage
@@ -201,7 +202,7 @@ responsible for checking the white board for status updates.
 
   \begin{enumerate}
           
-  \item ({\bf 6 Points}) Suppose that the memory manager keeps a linked list of allocated and free segments.  Next,
+  \item ({\bf 4 Points}) Suppose that the memory manager keeps a linked list of allocated and free segments.  Next,
     assume that the MMU tracks the following information for each unit of the memory; in this notation $P$
     denotes ``Process'' and $H$ stands \mbox{for ``Hole''}.
 
@@ -217,13 +218,35 @@ responsible for checking the white board for status updates.
     \begin{enumerate}
       \item ({\bf 2 Points}) First fit
       \item ({\bf 2 Points}) Best fit
-      \item ({\bf 2 Points}) Worst fit
+      % \item ({\bf 2 Points}) Worst fit
       % \item ({\bf 2 Points}) Quick fit
     \end{enumerate}
 
   \item ({\bf 4 Points}) The memory manager should use an efficient algorithm to allocate a program to a free location in
     memory.  What is the worst-case time complexity of the first fit and best fit algorithms?  Which, if any, of these
     two algorithms is likely to be faster?
+
+  \item ({\bf 2 Points}) Peter J.\ Denning proposed the working set model to characterize a program's use of computer
+    memory.  Draw a graph that visualizes the standard understanding of the working set.  Your graph should contain the
+    following entities:
+
+    \begin{enumerate}
+
+      \item A vertical axis with the label $w(k, t)$
+      \item A horizontal axis with the label $k$
+      \item A curve that shows the relationship between $w(k, t)$ and $k$
+
+    \end{enumerate}
+
+  You may assume the following meanings for the notation in the diagram:
+
+  \begin{enumerate}
+
+    \item $t$ is the current time in the operating system
+    \item $k$ denotes the number of the most recent memory references
+    \item$w(k, t)$ is the size of the working set at time $t$ for the past $k$ references  
+
+  \end{enumerate}
 
   \end{enumerate}
 
