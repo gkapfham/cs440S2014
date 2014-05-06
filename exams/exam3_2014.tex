@@ -86,18 +86,17 @@ showstringspaces=false}
 \begin{center}
 
 CMPSC 440: Operating Systems\\
-Examination Two\\
+Final Examination \\
 %Saturday December 11, 2004 \\
 
 \end{center}
 
-\noindent
-Answer the five questions that are listed on the following pages.  You must provide answers to these questions on a
-separate sheet of paper.  Please develop responses that clearly express your ideas in the most succinct manner possible.
-You are not permitted to complete this examination in conjunction with any of your classmates.  Furthermore, you cannot
-consult any outside references during this examination.  If you have questions concerning the following problems, then
-please visit my office during the examination period.  If you leave the classroom to take the exam, then you are
-responsible for checking the white board for status updates.
+\noindent Answer the ten questions that are listed on the following pages.  You must provide answers to these questions
+on a separate sheet of paper.  Please develop responses that clearly express your ideas in the most succinct manner
+possible.  You are not permitted to complete this examination in conjunction with any of your classmates.  Furthermore,
+you cannot consult any outside references during this examination.  If you have questions concerning the following
+problems, then please visit my office during the examination period.  If you leave the classroom to take the exam, then
+you are responsible for checking the white board for status updates.
 
 %\mbox{} \newline
 %\mbox{} \newline
@@ -109,9 +108,21 @@ responsible for checking the white board for status updates.
 
   \begin{enumerate}
 
-    \item ({\bf 4 Points}) There are four events that can lead to the creation of a process. \mbox{What are they}?
+    \item ({\bf 5 Points}) In order to manage the execution of a process, an operating system must contain a wide
+      variety of software components and leverage different types of hardware.  Draw a complete diagram of an operating
+      system that graphically depicts:
 
-    \item ({\bf 4 Points}) A process can be in one of three states: running, blocked, and ready. Using circles to
+      \begin{enumerate}
+
+        \item The operating system kernel
+        \item The existence of user programs
+        \item The hardware of a modern computer
+        \item The interface between the hardware and the software
+        \item The interaction between kernel and user programs
+
+      \end{enumerate}
+
+    \item ({\bf 3 Points}) A process can be in one of three states: running, blocked, and ready. Using circles to
       represent each of these states and directed edges to denote transitions between these states, draw a process-state
       diagram. All states and edges must have labels.
 
@@ -130,7 +141,7 @@ responsible for checking the white board for status updates.
   \label{fig:clientserver}
 \end{figure}
 
-\item ({\bf 10 Points}) There are many basic concepts that under gird the fundamentals of operating systems.  Answer the
+\item ({\bf 10 Points}) There are many basic concepts that undergird the fundamentals of operating systems.  Answer the
   following questions about basic operating systems concepts.
 
   \begin{enumerate}
@@ -161,18 +172,19 @@ responsible for checking the white board for status updates.
   operations and their trade-offs.
   
   \begin{enumerate}
-          
-  \item ({\bf 2 Points}) Many computers have both RAM and ROM.  What is the meaning of these two terms?  How does a
-    computer operating system use both RAM and ROM?
 
-  \item ({\bf 5 Points}) It is possible to divide up the computer's memory into address spaces.  What is an address
-    space?  What does it mean if an address space is dynamically relocatable? How could the MMU use base and limit
-    registers to support dynamic relocation?   
+    \item ({\bf 3 Points}) Many computers have both RAM and ROM.  What is the meaning of these two terms?  How does a
+      computer operating system use both RAM and ROM? Does the computer store the Basic Input/Output System (BIOS) in
+      the RAM or the ROM?
 
-  \item ({\bf 3 Points}) The majority of modern operating systems support both virtual and physical memory.  After
-    clearly defining both of these types of memory, please state which one is faster and explain why this is the case.
-    Why does an OS support both of these?
-    
+    \item ({\bf 4 Points}) It is possible to divide up the computer's memory into address spaces.  What is an address
+      space?  What does it mean if an address space is dynamically relocatable? How could the MMU use the base and limit
+      registers to support dynamic relocation?   
+
+    \item ({\bf 3 Points}) The majority of modern operating systems support both virtual and physical memory.  After
+      clearly defining both of these types of memory, please state which one is faster and explain why this is the case.
+      Why does an OS support both of these?
+
   \end{enumerate}
         
 \newpage
@@ -189,7 +201,7 @@ responsible for checking the white board for status updates.
 
   \begin{enumerate}
           
-  \item ({\bf 6 Points}) Suppose that the memory manager keeps a linked list of allocated and free segments.  Next,
+  \item ({\bf 4 Points}) Suppose that the memory manager keeps a linked list of allocated and free segments.  Next,
     assume that the MMU tracks the following information for each unit of the memory; in this notation $P$
     denotes ``Process'' and $H$ stands \mbox{for ``Hole''}.
 
@@ -205,13 +217,35 @@ responsible for checking the white board for status updates.
     \begin{enumerate}
       \item ({\bf 2 Points}) First fit
       \item ({\bf 2 Points}) Best fit
-      \item ({\bf 2 Points}) Worst fit
+      % \item ({\bf 2 Points}) Worst fit
       % \item ({\bf 2 Points}) Quick fit
     \end{enumerate}
 
-  \item ({\bf 4 Points}) The memory manager should use an efficient algorithm to allocate a program to a free location in
+  \item ({\bf 3 Points}) The memory manager should use an efficient algorithm to allocate a program to a free location in
     memory.  What is the worst-case time complexity of the first fit and best fit algorithms?  Which, if any, of these
     two algorithms is likely to be faster?
+
+  \item ({\bf 3 Points}) Peter J.\ Denning proposed the working set model to characterize a program's use of computer
+    memory.  Draw a graph that visualizes the standard understanding of the working set.  Your graph should contain the
+    following entities:
+
+    \begin{enumerate}
+
+      \item A vertical axis with the label $w(k, t)$
+      \item A horizontal axis with the label $k$
+      \item A curve that shows the relationship between $w(k, t)$ and $k$
+
+    \end{enumerate}
+
+  You may assume the following meanings for the notation in the diagram:
+
+  \begin{enumerate}
+
+    \item $t$ is the current time in the operating system
+    \item $k$ denotes the number of the most recent memory references
+    \item$w(k, t)$ is the size of the working set at time $t$ for the past $k$ references  
+
+  \end{enumerate}
 
   \end{enumerate}
 
@@ -245,7 +279,7 @@ responsible for checking the white board for status updates.
       \item Class 3
     \end{itemize}
     
-    Using the $R$ and $W$ bits in your response, what is the meaning of these four classes?
+    Using the $R$ and $M$ bits in your response, what is the meaning of these four classes?
 
     \item ({\bf 2 Points}) One of the aforementioned classes contains an entity known at the VIP.  What is the meaning
       of this term? What does the NRU algorithm do with these VIPs?
@@ -259,9 +293,13 @@ responsible for checking the white board for status updates.
 
   \begin{enumerate}
 
-    \item ({\bf 4 Points}) Operating systems commonly support both sequential-access and random-access files.  What is
-      the meaning of these two terms?  What type of file would a database management system use to store its contents?
-      Why?
+    % \item ({\bf 4 Points}) Operating systems commonly support both sequential-access and random-access files.  What is
+    %   the meaning of these two terms?  What type of file would a database management system use to store its contents?
+    %   Why?
+
+    \item ({\bf 4 Points}) File system traversal involves the automated visitation of all of the files and directories
+      in a specified region of the file system. Using either Java source code or pseudo code, implement a complete file
+      system traversal method.
 
     \item ({\bf 4 Points}) A file system often supports navigation of directories with both relative and absolute path
       names.  What is the meaning of these two terms?  Please give an example of each path type and explain what
@@ -284,65 +322,66 @@ responsible for checking the white board for status updates.
 
   \newpage
 
-  \begin{figure}[p]
-    \centering
-    \includegraphics{fig412}
-    \vspace*{-6.75in}
-    \caption{A Structure for File Management.}
-    \label{fig:fat}
-  \end{figure}
+  % \begin{figure}[p]
+  %   \centering
+  %   \includegraphics{fig412}
+  %   \vspace*{-6.75in}
+  %   \caption{A Structure for File Management.}
+  %   \label{fig:fat}
+  % \end{figure}
 
-\item ({\bf 10 Points}) The file system must have an efficient implementation of files and directories that supports
-  rapid creation, deletion, and location.  Answer the following questions about file system implementation and
-  the use of disk drives.
-
-\begin{enumerate}
-
-  \item ({\bf 5 Points}) Figure~\ref{fig:fat} shows one example of a structure that a file system can use to manage
-    files.  What is the name of this structure? How does a file system use this structure to find files?  What are the
-    drawbacks associated with this approach?
-
-  \item ({\bf 3 Points}) Certain file systems, such as NTFS, provide support for journaling.  What is a
-    journaling file system?  What are the benefits and drawbacks associated with journals?
-
-  \item ({\bf 2 Points}) It is possible to have a file system run on a solid-state drive (SSD).  What is an SSD?  What
-    are the benefits associated with the use of SSDs? 
-
-\end{enumerate}
-
-\newpage
+% \item ({\bf 10 Points}) The file system must have an efficient implementation of files and directories that supports
+%   rapid creation, deletion, and location.  Answer the following questions about file system implementation and
+%   the use of disk drives.
+% 
+% \begin{enumerate}
+% 
+%   \item ({\bf 5 Points}) Figure~\ref{fig:fat} shows one example of a structure that a file system can use to manage
+%     files.  What is the name of this structure? How does a file system use this structure to find files?  What are the
+%     drawbacks associated with this approach?
+% 
+%   \item ({\bf 3 Points}) Certain file systems, such as NTFS, provide support for journaling.  What is a
+%     journaling file system?  What are the benefits and drawbacks associated with journals?
+% 
+%   \item ({\bf 2 Points}) It is possible to have a file system run on a solid-state drive (SSD).  What is an SSD?  What
+%     are the benefits associated with the use of SSDs? 
+% 
+% \end{enumerate}
+% 
+% \newpage
 
 \item ({\bf 10 Points}) Computer hardware contains a wide variety of input/output devices that the operating system must
   manage.  Answer the following questions about these devices.
 
   \begin{enumerate}
 
-    \item ({\bf 4 Points}) A computer can contain by volatile and non-volatile memory.  What are the similarities and
-      differences between these two types of memory?  Please give a situation in which it would be advisable to use each
-      type of memory.
+    \item ({\bf 4 Points}) A computer system can contain both volatile and non-volatile memory.  What are the
+      similarities and differences between these two types of memory?  Please give a situation in which it would be
+      advisable to use each type of memory.
 
     \item ({\bf 3 Points}) Many operating systems, like GNU/Linux, support the X Windows System.  What role do the X
       client, X server, and the X protocol have in running an interface?
 
     \item ({\bf 3 Points}) The main paradigm for computing often oscillates between the use of thin clients and fat
-      clients.  What is the meaning of these two terms?  After furnishing an appropriate definiion of these client
-      types, please give an example of when one of the types would be best according to a well-defined metric.
+      clients.  What is the meaning of these two terms?  After furnishing an appropriate definition of these client
+      types, please give an example of a situation in which one of the types would be best according to a well-defined
+      metric.
 
   \end{enumerate}
 
   \newpage
 
-\item ({\bf 10 Points}) Given the wide variety of different devices, it is important for an operating system to support
-  power management.  Answer the following questions about this topic.
+\item ({\bf 10 Points}) Given the high cost of electricity and batteries, it is important for an operating system to
+  support power management.  Answer the following questions about this topic.
 
   \begin{enumerate}
 
-    \item ({\bf 4 Points}) Why would it be useful to run a power management module in the operating system that runs
+    \item ({\bf 4 Points}) Why would it be useful to run a power management module in the operating system that runs on
       either a server or a mobile device? Your response to this question should furnish two reasons for the server and
       two for the mobile device.
 
-    \item ({\bf 4 Points}) There are many different devices in a modern computation device such as a laptop or a tablet.
-      What are three of the most ``power hungry'' parts of these devices? 
+    \item ({\bf 4 Points}) There are many different components of a computation device such as a laptop or a
+      tablet.  What are three of the most ``power hungry'' parts of these devices? 
 
     \item ({\bf 2 Points}) Suppose that you are implementing an operating system's power-management module for the
       central processing unit (CPU).  What are two strategies that you could implement to reduce the CPU's consumption
@@ -361,9 +400,9 @@ responsible for checking the white board for status updates.
       resource deadlock. What are these four conditions?
 
     \item ({\bf 4 Points}) It is possible to model the use of resources in a multi-processor operating system with a
-      resource allocation graph (RAG).  What is the meaning of the nodes and edges in a RAG?  How does the structure of
-      the RAG indicate that the operating system is in deadlock? Your response to this question should furnish a
-      graphical depiction of a RAG that shows the evidence of a deadlock.
+      resource allocation graph (RAG).  What is the meaning of the nodes and the edges in a RAG?  How does the structure
+      of the RAG indicate that the operating system is in deadlock? Your response to this question should furnish a
+      graphical depiction of a RAG that shows the evidence of a system in deadlock.
 
     \item ({\bf 2 Points}) The ostrich algorithm is one method for managing deadlocks in an operating system.  How does
       the ostrich algorithm work? What are the benefits of this approach?
